@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GusBus.Space</title>
   <link rel="stylesheet" href="style.css">
+  <script src="DoodleBot.js"></script>
 </head>
 <body>
 
@@ -40,6 +41,14 @@
         A JavaScript version is in the works and will be added to this
         site on November 15, 2023!
       </p>
+
+      <div>
+        <input id="doodlebot-input" maxlength="512">
+        <button onclick="onClick(this)">Generate prompt</button>
+      </div>
+      <div>
+        <label id="doodlebot-label"></label>
+      </div>
     </main>
 
     <section class="right-sidebar">
@@ -54,6 +63,9 @@
       <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
     </section>
 
-    <footer id="footer">CC0 Public Domain, 2023</footer>
+    <footer id="footer">
+      This site template is public domain! Access the code
+      <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">here</a>
+    </footer>
   </div>
 </body>
