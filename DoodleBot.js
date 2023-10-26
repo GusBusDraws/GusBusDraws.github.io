@@ -1,13 +1,13 @@
 function onClick($this) {
     let input = document.getElementById('doodlebot-input').value;
-    console.log(input);
-    // promptLabel.innerHTML = input.value;
-    if (input.length == 0) {
-        repsonse = "DoodleBot coming soon!";
+    console.log('input:', input);
+    let response;
+    if (input.length === 0) {
+        response = "DoodleBot coming soon!";
     } else {
-        response = input
+        response = "DoodleBot coming soon!" + '<br>' + input
     }
-    console.log(response);
+    console.log('response:', response);
     let promptLabel = document.getElementById('doodlebot-label');
     promptLabel.innerHTML = response
 }
