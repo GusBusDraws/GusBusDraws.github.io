@@ -84,7 +84,7 @@ EXCEPT for the navigation */
 .container a {
     color: #ED64F5;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     color: #a49cba;
