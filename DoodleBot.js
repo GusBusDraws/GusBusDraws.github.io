@@ -12,9 +12,8 @@ function dataReady(json) {
   data = json;
 }
 
-function getRandomEntry(arg) {
-  let entry = data[
-    Math.floor(Math.random() * items.length)];
+function getRandomEntry(kw) {
+  let entry = data[kw][Math.floor(Math.random() * data.length)];
   return entry
 }
 
@@ -29,10 +28,13 @@ function getPrompt(args) {
       let i = 0;
       // When a matching keyword is found, exit the loop
       while (found != true && i < Object.keys(data).length) {
-        let kw = Object.keys(data).slice(i);
+        // Ge the ith keyword from the JSON keys
+        let kw = Object.keys(data)[i];
         if (arg.includes(kw)) {
+          console.log(kw + ' found in ' + arg)
           let word = getRandomEntry(kw);
           let subbed = arg.replace('%' + kw, word);
+          console.log('Substituted ' + subbed + ' for ' + arg)
           words.push(subbed);
           found = true;
         } else {
