@@ -2,50 +2,87 @@ let data = {};
 loadJSON()
 
 function loadJSON() {
-    url = 'https://gusbus.space/DoodleBot/keywords.json'
-    fetch(url)
-        .then(response => response.json())
-        .then((json) => {dataReady(json)});
+  url = 'https://gusbus.space/DoodleBot/keywords.json'
+  fetch(url)
+    .then(response => response.json())
+    .then((json) => {dataReady(json)});
 }
 
 function dataReady(json) {
-    data = json;
+  data = json;
+}
+
+function getRandomEntry(arg) {
+  let entry = data[
+    Math.floor(Math.random() * items.length)];
+  return entry
+}
+
+function getPrompt(args) {
+  console.log('Getting prompt...')
+  let words = [];
+  // For each arg, if it contains a "%", iterate through keywords looking for a
+  // match withing the arg
+  for (let arg of args) {
+    if (arg.includes('%')) {
+      let found = false;
+      let i = 0;
+      // When a matching keyword is found, exit the loop
+      while (found != true && i < Object.keys(data).length) {
+        let kw = Object.keys(data).slice(i);
+        if (arg.includes(kw)) {
+          let word = getRandomEntry(kw);
+          let subbed = arg.replace('%' + kw, word);
+          words.push(subbed);
+          found = true;
+        } else {
+          i ++
+        }
+      }
+      if (found === false) {
+        console.log('Keyword not found:', arg)
+        // If keyword not found, keep the %-containing substring in the
+        // prompt as an indicator
+        words.push(arg);
+      }
+    } else {
+      // If arg doesn't include "%", add it to the list of words
+      words.push(arg)
+    }
+  }
+  let prompt = words.join(' ')
+  return prompt
 }
 
 function generate() {
-    console.log('data:', data)
-    // let input = document.getElementById('doodlebot-input').value;
-    let input = '!prompt An %adjective %animal with an %any-item';
-    console.log('input:', input);
-    let response;
-    let args = input.split(' ');
-    if (input.length === 0) {
-        response = "DoodleBot coming soon!"
-    } else if (args[0] === '!prompt' && args.length === 1) {
-        response = "DoodleBot coming soon!" + '<br/>' + getHelp();
-    } else if (args[0] === '!prompt' && args.length > 1) {
-        let prompt = getPrompt(args.slice(1));
-        response = "DoodleBot coming soon!" + '<br/>' + prompt;
-    }
-    console.log('response:', response);
-    let promptLabel = document.getElementById('doodlebot-label');
-    promptLabel.innerHTML = response
+  console.log('data:', data)
+  // let input = document.getElementById('doodlebot-input').value;
+  let input = '!prompt An %adjective %animal with an %any-item';
+  console.log('input:', input);
+  let response;
+  let args = input.split(' ');
+  if (input.length === 0) {
+    response = "DoodleBot coming soon!"
+  } else if (args[0] === '!prompt' && args.length === 1) {
+    response = "DoodleBot coming soon!" + '<br/>' + getHelp();
+  } else if (args[0] === '!help' && args.length === 1) {
+    response = "DoodleBot coming soon!" + '<br/>' + getHelp();
+  } else if (args[0] === '!prompt' && args.length > 1) {
+    let prompt = getPrompt(args.slice(1));
+    response = "DoodleBot coming soon!" + '<br/>' + prompt;
+  } else if (args.length > 1) {
+    let prompt = getPrompt(args);
+    response = "DoodleBot coming soon!" + '<br/>' + prompt;
+  }
+  console.log('response:', response);
+  let promptLabel = document.getElementById('doodlebot-label');
+  promptLabel.innerHTML = response
 }
 
 function getHelp() {
-    helpMsg = `Send a message beginning with "!prompt" that includes at least
-        one keyword marked with a leading "%"`
-    return helpMsg
-}
-function getPrompt(args) {
-    let kws = []
-    for (let arg of args) {
-        if (arg.includes('%')) {
-            kws.push(arg.slice(1))
-        }
-    }
-    response = kws
-    return response
+  helpMsg = `Send a message beginning with "!prompt" that includes at least
+    one keyword marked with a leading "%"`
+  return helpMsg
 }
 
 // Python version:
