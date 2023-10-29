@@ -19,7 +19,7 @@
     </header>
 
     <main class="main-content">
-      <h1>Welcome to GusBus.Space!</h1>
+      <h1>Welcome to GusBus Space!</h1>
       <p>
         This site was created by Gus Becker, an artist and research scientist
         living in Washington, DC.
@@ -38,16 +38,16 @@
         <a href="https://discord.gg/DyM8CDzXs3" target="_blank">Doodle Crew Discord server</a>
         and on the subreddit
         <a href="https://reddit.com/r/DoodleBot" target="_blank">r/DoodleBot</a>.
-        A JavaScript version is in the works and will be added to this
-        site on November 15, 2023!
       </p>
 
-      <div>
-        <input id="doodlebot-input" maxlength="512">
-        <button onclick="onClick(this)">Generate prompt</button>
-      </div>
-      <div>
-        <label id="doodlebot-label"></label>
+      <div class="doodlebot">
+        <div>
+          <textarea id="doodlebot-input" maxlength="512"></textarea>
+          <button onclick="generate()">Generate prompt</button>
+        </div>
+        <div>
+          <label id="doodlebot-label"></label>
+        </div>
       </div>
     </main>
 
@@ -64,8 +64,12 @@
     </section>
 
     <footer id="footer">
-      This site template is public domain! Access the code
-      <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">here</a>
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
     </footer>
   </div>
 </body>
