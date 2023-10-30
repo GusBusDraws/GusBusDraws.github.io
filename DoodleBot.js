@@ -58,6 +58,7 @@ function getPrompt(args) {
     }
   }
   let prompt = words.join(' ')
+  prompt = checkGrammar(prompt);
   return prompt
 }
 
@@ -70,9 +71,11 @@ function generate() {
   let args = input.split(' ');
   if (input.length === 0) {
     response = getHelp();
-  } else if (args[0] === '!prompt' && args.length === 1) {
-    response = getHelp();
   } else if (args[0] === '!help' && args.length === 1) {
+    response = getHelp();
+  } else if (args[0] === '!keywords' && args.length === 1) {
+    response = getKeywords();
+  } else if (args[0] === '!prompt' && args.length === 1) {
     response = getHelp();
   } else if (args[0] === '!prompt' && args.length > 1) {
     let prompt = getPrompt(args.slice(1));
@@ -87,27 +90,38 @@ function generate() {
 }
 
 function getHelp() {
-  helpMsg = `Send a message that includes at least
-    one keyword marked with a leading "%"`
+  helpMsg = `To generate a prompt, type a message that includes at least
+    one of the following keywords marked with a leading "%": <br/> <br/>` +
+    Object.keys(data).join(', ')
   return helpMsg
 }
 
-// Python version:
-// def check_grammar(self, prompt_list):
-//     for i, word in enumerate(prompt_list):
-//         if word == 'a':
-//             # If the next word in prompt_list starts with a vowel:
-//             if prompt_list[i + 1][0] in 'aeiou':
-//                 # Replace the item at this position in prompt_list (word)
-//                 # with 'an' instead of 'a'
-//                 prompt_list[i] = 'an'
-//         elif word == 'an':
-//             # If the next word in prompt_list does not start with a vowel:
-//             if prompt_list[i + 1][0] not in 'aeiou':
-//                 # Replace the item at this position in prompt_list (word)
-//                 # with 'a' instead of 'an'
-//                 prompt_list[i] = 'a'
-//     prompt_list[0] = prompt_list[0].capitalize()
-//     return prompt_list
+function getKeywords() {
+  return Object.keys(data).join(', ')
+}
 
+function checkGrammar(prompt) {
+  let words = prompt.split(' ');
+  let i = 0;
+  for (let word of words) {
+    if (word === 'a') {
+      // If the next word in words starts with a vowel:
+      if ('aeiou'.includes(words[i + 1].slice(0, 1))) {
+        // Replace the item at this position in prompt_list (word)
+        // with 'an' instead of 'a'
+        words[i] = 'an'
+      }
+    } else if (word === 'an') {
+      // If the next word in words does NOT start with a vowel:
+      if (!'aeiou'.includes(words[i + 1].slice(0, 1))) {
+        // Replace the item at this position in prompt_list (word)
+        // with 'an' instead of 'a'
+        words[i] = 'a'
+      }
+    }
+    i ++
+  }
+  words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1)
+  return words.join(' ')
+}
 
