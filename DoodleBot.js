@@ -71,9 +71,11 @@ function generate() {
   let args = input.split(' ');
   if (input.length === 0) {
     response = getHelp();
-  } else if (args[0] === '!prompt' && args.length === 1) {
-    response = getHelp();
   } else if (args[0] === '!help' && args.length === 1) {
+    response = getHelp();
+  } else if (args[0] === '!keywords' && args.length === 1) {
+    response = getKeywords();
+  } else if (args[0] === '!prompt' && args.length === 1) {
     response = getHelp();
   } else if (args[0] === '!prompt' && args.length > 1) {
     let prompt = getPrompt(args.slice(1));
@@ -89,9 +91,13 @@ function generate() {
 
 function getHelp() {
   helpMsg = `To generate a prompt, type a message that includes at least
-    one of the following keywords marked with a leading "%": <br/>` +
+    one of the following keywords marked with a leading "%": <br/> <br/>` +
     Object.keys(data).join(', ')
   return helpMsg
+}
+
+function getKeywords() {
+  return Object.keys(data).join(', ')
 }
 
 function checkGrammar(prompt) {
@@ -113,6 +119,7 @@ function checkGrammar(prompt) {
         words[i] = 'a'
       }
     }
+    i ++
   }
   words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1)
   return words.join(' ')
