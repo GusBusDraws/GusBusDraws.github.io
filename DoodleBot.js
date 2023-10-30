@@ -87,8 +87,9 @@ function generate() {
 }
 
 function getHelp() {
-  helpMsg = `Send a message that includes at least
-    one keyword marked with a leading "%"`
+  helpMsg = `To generate a prompt, type a message that includes at least
+    one of the following keywords marked with a leading "%": <br/>` +
+    Object.keys(data).join(', ')
   return helpMsg
 }
 
