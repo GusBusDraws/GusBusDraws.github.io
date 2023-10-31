@@ -12,7 +12,15 @@ the images as variables */
     --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
 
     /* colors */
-    --content: #43256E;
+    --bg-color: #08031A;
+    --console-highlights: #12f028;
+    --console-text: #25b233;
+    --console-trans: #188123;
+    --console-hover: #ffffff;
+    --console-bg: #0a291c;
+    --prev-content: #43256E;
+    --prev-header-color: #5e4e8c;
+    --prev-border-color: #ED64F5;
 }
 
 /* if you have the URL of a font, you can set it below */
@@ -50,13 +58,26 @@ and then link it! Many fonts have separate files for each style
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'Fira Mono', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+}
+
+@font-face {
+    font-family: 'Fira Mono', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap');
+    font-weight: bold;
+}
+
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Fira Mono', monospace;
     margin: 0;
-    background-color: #08031A;
+    /* background-color: #08031A; */
+    background-color: var(--bg-color);
     /* you can delete the line below if you'd prefer to not use an image */
     /* background-size: 65px; */
-    color: #fceaff;
+    /* color: #fceaff; */
+    color: var(--console-text);
     /* background-image: var(--body-bg-image); */
 }
 
@@ -82,18 +103,21 @@ of the container */
 /* the area below is for all links on your page
 EXCEPT for the navigation */
 .container a {
-    color: #ED64F5;
+    /* color: #ED64F5; */
+    color: var(--console-highlights);
     font-weight: bold;
     text-decoration: underline;
 }
 a:hover {
-    color: #a49cba;
+    /* color: #a49cba; */
+    color: var(--console-hover);
     text-decoration: underline;
 }
 
 #header {
     width: 100%;
-    background-color: #5e4e8c;
+    /* background-color: #5e4e8c; */
+    background-color: var(--console-bg);
     /* header color here! */
     height: 150px;
     /* this is only for a background image! */
@@ -106,7 +130,7 @@ a:hover {
 /* navigation section!! */
 #navbar {
     height: 40px;
-    background-color: #13092D;
+    background-color: var(--bg-color);
     /* navbar color */
     width: 100%;
 }
@@ -125,7 +149,8 @@ a:hover {
 
 /* navigation links*/
 #navbar li a {
-    color: #ED64F5;
+    /* color: #ED64F5; */
+    color: var(--console-highlights);
     /* navbar text color */
     font-weight: 800;
     text-decoration: none;
@@ -134,7 +159,8 @@ a:hover {
 
 /* navigation link when a link is hovered over */
 #navbar li a:hover {
-    color: #a49cba;
+    /* color: #a49cba; */
+    color: var(--console-hover);
     text-decoration: underline;
 }
 
@@ -142,7 +168,8 @@ a:hover {
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
-    background-color: #241445;
+    /* background-color: #241445; */
+    background-color: var(--bg-color);
     width: 200px;
     /* padding: 20px; */
     font-size: smaller;
@@ -152,34 +179,63 @@ aside {
 /* this is the color of the main content area,
 between the sidebars! */
 main {
-    background-color: #43256E;
+    /* background-color: #43256E; */
+    background-color: var(--console-bg);
     flex: 1;
     padding: 20px;
     /* order: 2; */
 }
 
+main > div {
+    /* border: 1px solid #ED64F5; */
+    border: 1px solid var(--console-highlights);
+    padding: 20px;
+    margin: 10px;
+}
+
 /* Apply to all children of doodlebot div class */
 .doodlebot > * {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 textarea {
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    /* outline: solid var(--console-highlights); */
+    border: 1px solid var(--console-highlights);
+    outline-color: var(--console-highlights);
+    outline: 2px var(--console-highlights);
     width: 100%;
     height: 100px;
+    padding: 5px;
+    margin: 5px;
     resize: vertical;
 }
 
-
 .doodlebot button {
     /* display: block; */
+    font-family: 'Fira mono', monospace;
+    border: 1px solid var(--console-highlights);
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
     padding: 10px;
+    margin: 5px;
     width: 100%;
 }
 
+.doodlebot button:hover {
+    outline: 2px solid var(--console-highlights);
+}
+
+#doodlebot-label {
+    padding: 20px;
+}
+
 footer {
-    background-color: #13092D;
+    /* background-color: #13092D; */
+    background-color: var(--bg-color);
     /* background color for footer */
     width: 100%;
     padding: 10px;
@@ -190,7 +246,8 @@ footer {
 h1,
 h2,
 h3 {
-    color: #ED64F5;
+    /* color: #ED64F5; */
+    color: var(--console-highlights);
 }
 
 h1 {
