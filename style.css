@@ -12,10 +12,10 @@ the images as variables */
     --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
 
     /* colors */
-    --bg-color: #08031A;
+    --bg-color: #03151a;
     --console-highlights: #12f028;
     --console-text: #25b233;
-    --console-trans: #188123;
+    --console-trans: #105817;
     --console-hover: #ffffff;
     --console-bg: #0a291c;
     --prev-content: #43256E;
@@ -259,13 +259,6 @@ strong {
     color: #ED64F5;
 }
 
-/* this is just a cool box, it's the darker colored one */
-.box {
-    background-color: #13092D;
-    border: 1px solid #ED64F5;
-    padding: 10px;
-}
-
 #topBar {
     width: 100%;
     height: 30px;
@@ -278,6 +271,16 @@ strong {
 .container > * {
     width:100%;
     padding:1rem;
+}
+
+.link-header {
+    display: flex;
+    /* Used to allow flexbox to place content on right & left */
+    justify-content: space-between;
+}
+
+.link-header > a {
+    padding: 10px;
 }
 
 /* tablet breakpoint */
