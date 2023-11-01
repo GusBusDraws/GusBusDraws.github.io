@@ -222,7 +222,8 @@ textarea {
     color: var(--console-highlights);
     padding: 10px;
     margin: 5px;
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
 }
 
 .doodlebot button:hover {
