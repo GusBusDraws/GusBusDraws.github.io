@@ -100,18 +100,54 @@ function getKeywords() {
   return Object.keys(data).join(', ')
 }
 
+function getRandomPrompt() {
+  let promptBank = [
+    'a %adjective %crustacean who is half %fantasy-creature and delves into dungeons as a %fantasy-class with a %scifi-item',
+    'A %adjective %color %fantasy-creature that is a %fantasy-class with a %fantasy-item',
+    'a %adjective %scifi-creature half %fantasy-creature that is a %job',
+    '%adjective %scifi-creature %scifi-class who has a %material %scifi-item in their collection',
+    'a %scifi-creature %fantasy-class with a %fantasy-item and a %any-item who has a %accessory',
+    '%emotion %fantasy-creature working as a %job on the moon base',
+    'a %adjective %fantasy-creature that is a %fantasy-class',
+    'a %adjective half %fantasy-creature half %fantasy-creature with a %fantasy-item that is a %scifi-class',
+    'A %animal %fantasy-class from %scifi-location',
+    'A half %animal half %fantasy-creature from %adjective %any-location with a %scifi-item and a %any-item',
+    'A %fantasy-creature with the head of a %bug and the arms of a %animal they have a %fantasy-item, a %fantasy-item, and a %fantasy-item and are a %fantasy-class',
+    'A %fantasy-creature half %animal with the arms of a %bug they have a %fantasy-item, a %fantasy-item, and a %fantasy-item and are a %fantasy-class',
+    'A %fantasy-creature with the head of a %bug, they are a %fantasy-class and have a %any-item, %any-item, and %fantasy-item',
+    'a %bug that is a %fantasy-class with a %fantasy-item, a %fantasy-item, and a %fantasy-item',
+    'a %scifi-creature %scifi-class that studies %field-of-study, they perform experiments involving %material and %scifi-item',
+    'a %fish with a %any-item and a %any-item, they are a %fantasy-class',
+    'A %fantasy-class %fantasy-creature with %bug features, they wield a %fantasy-item. %color %color %color',
+    'A %fantasy-creature with %crustacean features. They are a %fantasy-class %field-of-study with a %fantasy-item. %color %color %color',
+    'a %emotion %animal in %any-location holding a %inanimate-object',
+    'A %fantasy-creature with %animal features. They are a %fantasy-class %job with a %any-item. %color %color %color',
+    'A %fantasy-item that is also a %material %scifi-item.',
+    'A %adjective %fantasy-creature from %any-location, their possessions are %fantasy-item, %fantasy-item, and %fantasy-item. They are %color.',
+    'A %fantasy-item made of %material from %any-location',
+    'A %animal with a %accessory %active-ing-verb',
+    'A %fantasy-creature with a %fantasy-item, %color %color',
+    'A %cryptid %fantasy-class with a %scifi-item',
+    'A %any-creature %any-class with a %any-item',
+  ];
+  let prompt = promptBank[Math.floor(Math.random() * promptBank.length)];
+  document.getElementById("doodlebot-input").value = prompt;
+  generate()
+  return
+}
+
 function checkGrammar(prompt) {
   let words = prompt.split(' ');
   let i = 0;
   for (let word of words) {
-    if (word === 'a') {
+    if (word === 'a' || word === 'A') {
       // If the next word in words starts with a vowel:
       if ('aeiou'.includes(words[i + 1].slice(0, 1))) {
         // Replace the item at this position in prompt_list (word)
         // with 'an' instead of 'a'
         words[i] = 'an'
       }
-    } else if (word === 'an') {
+    } else if (word === 'an' || word === 'An') {
       // If the next word in words does NOT start with a vowel:
       if (!'aeiou'.includes(words[i + 1].slice(0, 1))) {
         // Replace the item at this position in prompt_list (word)
