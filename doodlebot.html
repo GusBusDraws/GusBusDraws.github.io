@@ -19,36 +19,33 @@
     </header>
 
     <main class="main-content">
-      <div>
-        <h1>Welcome to GusBus Space!</h1>
+      <div class="doodlebot">
+        <h2>DoodleBot</h2>
         <p>
-          My name is Gus Becker and I'm an artist and research scientist
-          living in Washington, DC.
+          Since the invention of the pencil, people have asked the age old
+          question: What should I draw?
+        </p>
+        <p>Ask no longer! Or rather, ask DoodleBot!</p>
+        <p>
+          DoodleBot is a prompt-generation bot that helps reduce friction when
+          making art. Feel free to post any DoodleBot inspired creations on the
+          subreddit <a href="https://reddit.com/r/DoodleBot" target="_blank">r/DoodleBot</a>!
         </p>
         <p>
-          I decided to make this site after coming across a blog post about the
-          <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" taget="_blank">Web Revival</a>
-          movement and wanting to be a part of it! I thought having a place on
-          the web to call my own sounded like a nice respite from the big
-          sites of today. Plus I have plenty of projects, so I might as well
-          share them with others and build some community in the meantime!
+          Enter a prompt below, or use the command "!help" to learn how to
+          generate a prompt. The command "!keywords" will list the available
+          keywords that can be used.
         </p>
-        <p>
-          You can check out my projects by clicking the banners* below!
-        </p>
-      </div>
-
-      <a class="project-banner" href="doodlebot.html">
-        <img src="images/doodlebot-720x253.png" alt="Robot pirate holding a big pencil beside the text Doodle Bot">
-      </a>
-
-      <div>
-        <p>
-          *Right now this is just a single banner (DoodleBot) but next I'll
-          add some pages about generative art (maybe Conway's Game of Life?)
-          and a sci-fi worldbuilding project of mine called the Galactic
-          Transitway!
-        </p>
+        <div>
+          <textarea id="doodlebot-input" maxlength="512"></textarea>
+        </div>
+        <div>
+          <button id="gen-button" onclick="generate()">Generate prompt</button>
+          <button id="rand-button" onclick="getRandomPrompt()">Random prompt</button>
+        </div>
+        <div>
+          <label id="doodlebot-label"></label>
+        </div>
       </div>
     </main>
 
