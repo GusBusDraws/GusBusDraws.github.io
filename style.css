@@ -193,6 +193,11 @@ main > div {
     margin: 10px;
 }
 
+.project-banner > img {
+    max-width: 100%;
+    padding: 10px;
+}
+
 /* Apply to all children of doodlebot div class */
 .doodlebot > div {
     display: flex;
