@@ -140,10 +140,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* this colors BOTH sidebars
-if you want to style them separately,
-create styles for #leftSidebar and #rightSidebar */
-aside {
+.right-sidebar {
     /* background-color: #241445; */
     background-color: var(--bg-color);
     width: 200px;
