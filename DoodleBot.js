@@ -2,7 +2,7 @@ let data = {};
 loadJSON()
 
 function loadJSON() {
-  url = 'https://gusbus.space/DoodleBot/keywords.json'
+  url = 'https://gusbus.space/DoodleBot.py/keywords.json'
   fetch(url)
     .then(response => response.json())
     .then((json) => {dataReady(json)});
