@@ -35,30 +35,6 @@ and then link it! Many fonts have separate files for each style
 */
 
 @font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-    font-style: italic;
-    font-weight: bold;
-}
-
-@font-face {
     font-family: 'Fira Mono', monospace;
     src: url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 }
@@ -164,10 +140,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* this colors BOTH sidebars
-if you want to style them separately,
-create styles for #leftSidebar and #rightSidebar */
-aside {
+.right-sidebar {
     /* background-color: #241445; */
     background-color: var(--bg-color);
     width: 200px;
@@ -186,16 +159,29 @@ main {
     /* order: 2; */
 }
 
-main > div {
+.main-title {
     /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
-    padding: 20px;
+    /* padding: 20px; */
+    padding-left: 20px;
+    /* padding-left: 10px; */
+    margin: 10px;
+}
+
+.main-tile {
+    /* border: 1px solid #ED64F5; */
+    border: 1px solid var(--console-highlights);
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    padding: 10px;
     margin: 10px;
 }
 
 .project-banner > img {
     max-width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Apply to all children of doodlebot div class */
