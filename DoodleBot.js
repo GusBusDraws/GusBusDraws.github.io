@@ -1,8 +1,8 @@
+const KEYWORDS_DATA_URL = 'https://gusbus.space/DoodleBot.py/keywords.json'
 let data = {};
-loadJSON()
+loadJSON(KEYWORDS_DATA_URL);
 
-function loadJSON() {
-  url = 'https://gusbus.space/DoodleBot.py/keywords.json'
+function loadJSON(url) {
   fetch(url)
     .then(response => response.json())
     .then((json) => {dataReady(json)});
