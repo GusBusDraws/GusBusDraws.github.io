@@ -4,4 +4,5 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2023-11-17
+- Update `loadJSON()` to accept URL as keyword
 - Add change log
