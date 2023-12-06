@@ -57,10 +57,6 @@ body {
     /* background-image: var(--body-bg-image); */
 }
 
-* {
-    box-sizing: border-box;
-}
-
 /* the "container" is what wraps your entire website */
 /* if you want something (like the header) to be Wider than
 the other elements, you will need to move that div outside
@@ -184,46 +180,6 @@ main {
     padding-right: 10px;
 }
 
-/* Apply to all children of doodlebot div class */
-.doodlebot > div {
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-}
-
-textarea {
-    background-color: var(--console-trans);
-    color: var(--console-highlights);
-    /* outline: solid var(--console-highlights); */
-    border: 1px solid var(--console-highlights);
-    outline-color: var(--console-highlights);
-    outline: 2px var(--console-highlights);
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-    margin: 5px;
-    resize: vertical;
-}
-
-.doodlebot button {
-    /* display: block; */
-    font-family: 'Fira mono', monospace;
-    border: 1px solid var(--console-highlights);
-    background-color: var(--console-trans);
-    color: var(--console-highlights);
-    padding: 10px;
-    margin: 5px;
-    width: 50%;
-}
-
-.doodlebot button:hover {
-    outline: 2px solid var(--console-highlights);
-}
-
-#doodlebot-label {
-    padding: 20px;
-}
-
 footer {
     /* background-color: #13092D; */
     background-color: var(--bg-color);
@@ -286,4 +242,48 @@ strong {
     #navbar ul {
         flex-wrap: wrap;
     }
+}
+
+  /*////////////////*/
+ /* DoodleBot Page */
+/*////////////////*/
+
+/* Apply to all children of doodlebot div class */
+.doodlebot > div {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+textarea {
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    /* outline: solid var(--console-highlights); */
+    border: 1px solid var(--console-highlights);
+    outline-color: var(--console-highlights);
+    outline: 2px var(--console-highlights);
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+    resize: vertical;
+}
+
+.doodlebot button {
+    /* display: block; */
+    font-family: 'Fira mono', monospace;
+    border: 1px solid var(--console-highlights);
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+}
+
+.doodlebot button:hover {
+    outline: 2px solid var(--console-highlights);
+}
+
+#doodlebot-label {
+    padding: 20px;
 }
