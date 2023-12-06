@@ -57,10 +57,6 @@ body {
     /* background-image: var(--body-bg-image); */
 }
 
-* {
-    box-sizing: border-box;
-}
-
 /* the "container" is what wraps your entire website */
 /* if you want something (like the header) to be Wider than
 the other elements, you will need to move that div outside
