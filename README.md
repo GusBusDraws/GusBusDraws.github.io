@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-02-12
+- Add Procedural Art banner and page
 - Add Galactic Transitway banner and page
 - Move pages to independent folders with index files and update links
 
