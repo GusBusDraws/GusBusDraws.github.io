@@ -173,11 +173,14 @@ main {
     margin: 10px;
 }
 
-.project-banner > img {
+.project-banner {
+    /* padding: 10px; */
+    margin: 10px;
+}
+
+.project-banner img {
     max-width: 100%;
     /* padding: 10px; */
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 footer {
