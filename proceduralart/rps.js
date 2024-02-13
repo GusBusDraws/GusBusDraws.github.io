@@ -1,6 +1,10 @@
 // @ts-check
 /// <reference path="../node_modules/@types/p5/global.d.ts" />
-let ncols = 150;
+let canvas;
+let divWidth;
+let colSizes = [10, 50, 100, 150, 200, 500]
+let colSizeIdx = 2
+let ncols = colSizes[colSizeIdx];
 let nrows = ncols;
 let asp;
 let tileWidth = 5;
@@ -29,26 +33,16 @@ let pen = 'rock';
 
 function setup() {
   console.log('Starting...')
-  // asp = windowHeight / windowWidth;
-  // nrows = int(ncols * asp)
-  print('ncols = ' + ncols)
-  print('nrows = ' + nrows)
-  // createCanvas(windowWidth, windowHeight);
-  let canvasDiv = document.getElementById('rps')
-  // If canvasDiv exists, set divWidth to offsetWidth, else 100
-  let divWidth = canvasDiv ? canvasDiv.offsetWidth : 100;
-  let nPixelsRow = nrows * tileHeight;
-  let nPixelsCol = ncols * tileWidth;
-  let canvas = createCanvas(divWidth, divWidth);
-  tileWidth = floor(width / ncols) + 1
-  tileHeight = tileWidth
+  canvas = remakeCanvas()
   canvas.parent('rps')
-  // tileWidth = windowWidth / ncols
-  // tileHeight = windowHeight / nrows
   frameRate(fps);
   noStroke();
   textSize(25);
   resetSketch();
+  // Set HTML labels
+  setLabel('thresh-label', thresh)
+  setLabel('rand-label', rand)
+  setLabel('grid-label', ncols)
 }
 
 function draw() {
@@ -109,6 +103,20 @@ function draw() {
   }
 }
 
+function remakeCanvas() {
+  print('ncols = ' + ncols)
+  print('nrows = ' + nrows)
+  let canvasDiv = document.getElementById('rps')
+  if (canvasDiv) {
+    divWidth = canvasDiv.offsetWidth;
+    console.log('divWidth =' + divWidth)
+  }
+  let canvas = createCanvas(divWidth, divWidth);
+  tileWidth = floor(divWidth / ncols) + 1
+  tileHeight = tileWidth
+  return canvas
+}
+
 function resetSketch() {
   grid = make2DArray(nrows, ncols, undefined);
   // Draw initial grid
@@ -149,6 +157,99 @@ function mouseClicked() {
   rect(j * tileWidth, i * tileHeight, tileWidth, tileHeight);
 }
 
+function setLabel(id, variable) {
+  let label = document.getElementById(id)
+  if (label) {
+    label.innerHTML = str(variable)
+  }
+}
+
+function decThresh() {
+  thresh = (thresh - 1 + 9) % 9
+  fill(255)
+  stroke(0)
+  text('Threshold = ' + thresh, textX, textY)
+  noStroke()
+  setLabel('thresh-label', thresh)
+}
+
+function incThresh() {
+  thresh = (thresh + 1) % 9
+  fill(255)
+  stroke(0)
+  text('Threshold = ' + thresh, textX, textY)
+  noStroke()
+  setLabel('thresh-label', thresh)
+}
+
+function decRand() {
+  rand = (rand - 1 + 9) % 9
+  fill(255)
+  stroke(0)
+  text('Randomness = ' + rand, textX, textY)
+  noStroke()
+  setLabel('rand-label', rand)
+}
+
+function incRand() {
+  rand = (rand + 1) % 9
+  fill(255)
+  stroke(0)
+  text('Randomness = ' + rand, textX, textY)
+  noStroke()
+  setLabel('rand-label', rand)
+}
+
+function decGrid() {
+  colSizeIdx = (colSizeIdx - 1 + colSizes.length) % colSizes.length
+  ncols = colSizes[colSizeIdx];
+  nrows = ncols;
+  setLabel('grid-label', ncols)
+  canvas = remakeCanvas();
+  canvas.parent('rps')
+  resetSketch();
+}
+
+function incGrid() {
+  colSizeIdx = (colSizeIdx + 1) % colSizes.length;
+  ncols = colSizes[colSizeIdx];
+  nrows = ncols;
+  setLabel('grid-label', ncols)
+  canvas = remakeCanvas();
+  canvas.parent('rps')
+  resetSketch();
+}
+
+function preset1() {
+  thresh = 4
+  rand = 3
+  setLabel('thresh-label', thresh)
+  setLabel('rand-label', rand)
+  print('Set to preset 1:')
+  print('Threshold = ' + thresh)
+  print('Randomness = ' + rand)
+}
+
+function preset2() {
+  thresh = 1
+  rand = 0
+  setLabel('thresh-label', thresh)
+  setLabel('rand-label', rand)
+  print('Set to preset 2:')
+  print('Threshold = ' + thresh)
+  print('Randomness = ' + rand)
+}
+
+function preset3() {
+  thresh = 0
+  rand = 0
+  setLabel('thresh-label', thresh)
+  setLabel('rand-label', rand)
+  print('Set to preset 3:')
+  print('Threshold = ' + thresh)
+  print('Randomness = ' + rand)
+}
+
 function keyPressed() {
     // Set spacebar to toggle play/pause of drawing loop
     if (key === ' ') {
@@ -173,53 +274,25 @@ function keyPressed() {
       pen = 'scissors'
     }
     else if (key === 'w') {
-      thresh = (thresh + 1) % 9
-      fill(255)
-      stroke(0)
-      text('Threshold = ' + thresh, textX, textY)
-      noStroke()
+      incThresh()
     }
     else if (key === 's') {
-      thresh = (thresh - 1 + 9) % 9
-      fill(255)
-      stroke(0)
-      text('Threshold = ' + thresh, textX, textY)
-      noStroke()
+      decThresh()
     }
     else if (key === 'd') {
-      rand = (rand + 1) % 9
-      fill(255)
-      stroke(0)
-      text('Randomness = ' + rand, textX, textY)
-      noStroke()
+      incRand()
     }
     else if (key === 'a') {
-      rand = (rand - 1 + 9) % 9
-      fill(255)
-      stroke(0)
-      text('Randomness = ' + rand, textX, textY)
-      noStroke()
+      decRand()
     }
     else if (key === '1') {
-      thresh = 4
-      rand = 3
-      print('Set to preset 1:')
-      print('Threshold = ' + thresh)
-      print('Randomness = ' + rand)
+      preset1()
     }
     else if (key === '2') {
-      thresh = 1
-      rand = 0
-      print('Set to preset 2:')
-      print('Threshold = ' + thresh)
-      print('Randomness = ' + rand)
+      preset2()
     }
     else if (key === '3') {
-      thresh = 0
-      rand = 0
-      print('Set to preset 3:')
-      print('Threshold = ' + thresh)
-      print('Randomness = ' + rand)
+      preset3()
     }
     else if (key === '8') {
       thresh = 8

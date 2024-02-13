@@ -23,14 +23,43 @@
         <h1>Procedural Art</h1>
       </div>
 
-      <div class="no-border-tile">
+      <div class="main-tile">
+        <h2>Rock, paper, scissors</h2>
+      </div>
+
+      <div class="app">
         <div class="p5-sketch" id="rps">
           <script src="rps.js"></script>
+        </div>
+        <div>
+          <button id="preset-1" onclick="preset1()">Preset 1</button>
+          <button id="preset-2" onclick="preset2()">Preset 2</button>
+          <button id="preset-3" onclick="preset3()">Preset 3</button>
+        </div>
+        <div>
+          <button id="dec-thresh" onclick="decThresh()"><<< Decrease threshold</button>
+          <div class="label-wrapper">
+            <label id="thresh-label"></label>
+          </div>
+          <button id="inc-thresh" onclick="incThresh()"> Increase threshold >>></button>
+        </div>
+        <div>
+          <button id="dec-rand" onclick="decRand()"><<< Decrease randomness</button>
+          <div class="label-wrapper">
+            <label id="rand-label"></label>
+          </div>
+          <button id="inc-rand" onclick="incRand()"> Increase randomness >>></button>
+        </div>
+        <div>
+          <button id="dec-grid" onclick="decGrid()"><<< Decrease grid size</button>
+          <div class="label-wrapper">
+            <label id="grid-label"></label>
+          </div>
+          <button id="inc-grid" onclick="incGrid()"> Increase grid size >>></button>
         </div>
       </div>
 
       <div class="main-tile">
-        <h2>Rock, paper, scissors</h2>
         <p>
           This is a cellular automaton where each color represents either
           rock, paper, or scissors. To calculate the next cell, the neighbors
@@ -48,17 +77,6 @@
           You can also change the range of the random number by pressing A and D
           (e.g. 2 picks a random number between -2 and 2, once
           again rolling back to 0 after passing 8).
-        </p>
-      </div>
-    </main>
-
-    <section class="right-sidebar">
-      <div class="main-tile">
-        <p>
-          Projects to come include some pages about generative art
-          (maybe Conway's Game of Life?)
-          and a sci-fi worldbuilding project of mine called the Galactic
-          Transitway!
         </p>
       </div>
     </main>

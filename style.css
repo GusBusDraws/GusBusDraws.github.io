@@ -183,7 +183,7 @@ main {
     /* padding: 10px; */
 }
 
-.no-border-tile {
+.app {
     /* margin: 10px; */
     padding-left: 10px;
     padding-right: 10px;
@@ -191,6 +191,34 @@ main {
 
 .p5-sketch {
     max-width: 100%;
+}
+
+.app div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app button {
+    /* display: block; */
+    font-family: 'Fira mono', monospace;
+    border: 1px solid var(--console-highlights);
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    padding: 20px;
+    margin: 5px;
+    width: 50%;
+}
+
+.app button:hover {
+    outline: 2px solid var(--console-highlights);
+}
+
+.app .label-wrapper {
+    padding: 10px;
+    padding-top: 10px;
+    width: 50px;
+    align-items: center;
 }
 
 footer {
