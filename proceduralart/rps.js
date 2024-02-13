@@ -1,10 +1,10 @@
 // @ts-check
 /// <reference path="../node_modules/@types/p5/global.d.ts" />
-let ncols = 100;
-let nrows;
+let ncols = 150;
+let nrows = ncols;
 let asp;
-let tileWidth;
-let tileHeight;
+let tileWidth = 5;
+let tileHeight = tileWidth;
 let rand = 3;
 let thresh = 4;
 let fps = 5;
@@ -13,6 +13,8 @@ let newGrid;
 let rock = 1;
 let paper = 2;
 let scissors = 3;
+let textX = 30;
+let textY = 30;
 let values = {
   'rock' : rock,
   'paper' : paper,
@@ -27,20 +29,24 @@ let pen = 'rock';
 
 function setup() {
   console.log('Starting...')
-  asp = windowHeight / windowWidth;
-  nrows = int(ncols * asp)
+  // asp = windowHeight / windowWidth;
+  // nrows = int(ncols * asp)
   print('ncols = ' + ncols)
   print('nrows = ' + nrows)
-  tileWidth = floor(windowWidth / ncols) + 1
-  tileHeight = tileWidth
+  // createCanvas(windowWidth, windowHeight);
+  let canvasDiv = document.getElementById('rps')
+  let divWidth = canvasDiv.offsetWidth;
   let nPixelsRow = nrows * tileHeight;
   let nPixelsCol = ncols * tileWidth;
-  // createCanvas(nPixelsCol, nPixelsRow);
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(divWidth, divWidth);
+  tileWidth = floor(width / ncols) + 1
+  tileHeight = tileWidth
+  canvas.parent('rps')
   // tileWidth = windowWidth / ncols
   // tileHeight = windowHeight / nrows
   frameRate(fps);
   noStroke();
+  textSize(25);
   resetSketch();
 }
 
@@ -162,28 +168,36 @@ function keyPressed() {
     else if (key === 'p') {
       pen = 'paper'
     }
-    else if (key === 's') {
+    else if (key === 'c') {
       pen = 'scissors'
     }
-    else if (keyCode === UP_ARROW) {
+    else if (key === 'w') {
       thresh = (thresh + 1) % 9
       fill(255)
-      text('Threshold = ' + thresh, 100, 100)
+      stroke(0)
+      text('Threshold = ' + thresh, textX, textY)
+      noStroke()
     }
-    else if (keyCode === DOWN_ARROW) {
+    else if (key === 's') {
       thresh = (thresh - 1 + 9) % 9
       fill(255)
-      text('Threshold = ' + thresh, 100, 100)
+      stroke(0)
+      text('Threshold = ' + thresh, textX, textY)
+      noStroke()
     }
-    else if (keyCode === RIGHT_ARROW) {
+    else if (key === 'd') {
       rand = (rand + 1) % 9
       fill(255)
-      text('Randomness = ' + rand, 100, 100)
+      stroke(0)
+      text('Randomness = ' + rand, textX, textY)
+      noStroke()
     }
-    else if (keyCode === LEFT_ARROW) {
+    else if (key === 'a') {
       rand = (rand - 1 + 9) % 9
       fill(255)
-      text('Randomness = ' + rand, 100, 100)
+      stroke(0)
+      text('Randomness = ' + rand, textX, textY)
+      noStroke()
     }
     else if (key === '1') {
       thresh = 4

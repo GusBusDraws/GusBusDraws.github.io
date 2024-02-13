@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-02-12
+- Update rps.js to work on page
+- Add rps.js for rock, paper, scissors section of Procedural Art
 - Update DoodleBot banner
 - Add Procedural Art banner and page
 - Add Galactic Transitway banner and page

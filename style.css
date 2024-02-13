@@ -159,17 +159,17 @@ main {
     /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
     /* padding: 20px; */
+    padding: 10px;
     padding-left: 20px;
-    /* padding-left: 10px; */
     margin: 10px;
 }
 
 .main-tile {
     /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding: 10px; */
     margin: 10px;
 }
 
@@ -181,6 +181,16 @@ main {
 .project-banner img {
     max-width: 100%;
     /* padding: 10px; */
+}
+
+.no-border-tile {
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.p5-sketch {
+    max-width: 100%;
 }
 
 footer {
