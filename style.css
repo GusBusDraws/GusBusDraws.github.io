@@ -159,7 +159,7 @@ main {
     /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
     /* padding: 20px; */
-    padding: 10px;
+    /* padding: 10px; */
     padding-left: 20px;
     margin: 10px;
 }
