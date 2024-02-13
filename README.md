@@ -3,6 +3,9 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-02-13
+- Add buttons to RPS page
+
 ### 2024-02-12
 - Update rps.js to work on page
 - Add rps.js for rock, paper, scissors section of Procedural Art
