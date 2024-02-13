@@ -93,7 +93,7 @@ a:hover {
     /* header color here! */
     height: 150px;
     /* this is only for a background image! */
-    /* if you want to put images IN the header, 
+    /* if you want to put images IN the header,
     you can add them directly to the <div id="header"></div> element! */
     /* background-image: var(--header-image); */
     background-size: 100%;
@@ -191,6 +191,7 @@ main {
 
 .p5-sketch {
     max-width: 100%;
+    padding-bottom: 10px;
 }
 
 .app div {
@@ -205,7 +206,7 @@ main {
     border: 1px solid var(--console-highlights);
     background-color: var(--console-trans);
     color: var(--console-highlights);
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
     width: 50%;
 }
@@ -216,7 +217,6 @@ main {
 
 .app .label-wrapper {
     padding: 10px;
-    padding-top: 10px;
     width: 50px;
     align-items: center;
 }
