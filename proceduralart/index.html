@@ -1,7 +1,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galactic Transitway</title>
+  <title>Procedural Art</title>
+  <script src="/p5.min.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -21,11 +22,68 @@
       <div class="main-title">
         <h1>Procedural Art</h1>
       </div>
+
+      <div class="no-border-tile">
+        <div class="p5-sketch" id="rps">
+          <script src="rps.js"></script>
+        </div>
+      </div>
+
       <div class="main-tile">
+        <h2>Rock, paper, scissors</h2>
         <p>
-          Project description coming soon!
+          This is a cellular automaton where each color represents either
+          rock, paper, or scissors. To calculate the next cell, the neighbors
+          of each cell that would beat that cell in a game of rock, paper,
+          scissors (e.g. paper for rock) are counted. If the number of cells
+          representing that state are above a certain threshold, the cell
+          changes colors to match the winning state. To make the pattern more
+          organic, a random number is added to the number of counted winning
+          cells before it is checked against the threshold.
+        </p>
+        <p>
+          This sketch is interactive! You can change the winning threshold that
+          determines when a cell changes colors by moving pressing W and S
+          (once you pass 8, it resets to 0).
+          You can also change the range of the random number by pressing A and D
+          (e.g. 2 picks a random number between -2 and 2, once
+          again rolling back to 0 after passing 8).
         </p>
       </div>
     </main>
+
+    <section class="right-sidebar">
+      <div class="main-tile">
+        <p>
+          Projects to come include some pages about generative art
+          (maybe Conway's Game of Life?)
+          and a sci-fi worldbuilding project of mine called the Galactic
+          Transitway!
+        </p>
+      </div>
+    </main>
+
+    <section class="right-sidebar">
+      <h2>Button</h2>
+      <p>You're welcome to link to my site with the following button:</p>
+      <a href="https://gusbus.space" target="_blank"><img src="/images/gusbus-88x31.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+      <p>If you do link to my site, let me know so I can link back!</p>
+      <h2>Other Links</h2>
+      <p>Here are some other places to find Gus across the web:</p>
+      <ul>
+        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+      </ul>
+      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+    </section>
+
+    <footer id="footer">
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
+    </footer>
   </div>
 </body>
