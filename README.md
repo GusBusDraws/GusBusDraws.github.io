@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-02-13
+- Make new CSS class for link tiles
 - Slightly tweak RPS button size and spacing
 - Add buttons to RPS page
 

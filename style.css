@@ -164,7 +164,7 @@ main {
     margin: 10px;
 }
 
-.main-tile {
+.tile {
     /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
     padding-left: 20px;
@@ -181,6 +181,27 @@ main {
 .project-banner img {
     max-width: 100%;
     /* padding: 10px; */
+}
+
+.link-tile {
+    border: 1px solid var(--console-highlights);
+    padding-left: 20px;
+    margin: 10px;
+}
+
+.link-header {
+    display: flex;
+    /* Used to allow flexbox to place content on right & left */
+    justify-content: space-between;
+}
+
+.link-header > a {
+    padding: 10px;
+}
+
+.link-desc {
+    padding: 10px;
+    padding-right: 20px;
 }
 
 .app {
@@ -259,16 +280,6 @@ strong {
 .container > * {
     width:100%;
     padding:1rem;
-}
-
-.link-header {
-    display: flex;
-    /* Used to allow flexbox to place content on right & left */
-    justify-content: space-between;
-}
-
-.link-header > a {
-    padding: 10px;
 }
 
 /* tablet breakpoint */
