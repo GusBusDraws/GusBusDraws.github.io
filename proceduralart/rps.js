@@ -35,7 +35,8 @@ function setup() {
   print('nrows = ' + nrows)
   // createCanvas(windowWidth, windowHeight);
   let canvasDiv = document.getElementById('rps')
-  let divWidth = canvasDiv.offsetWidth;
+  // If canvasDiv exists, set divWidth to offsetWidth, else 100
+  let divWidth = canvasDiv ? canvasDiv.offsetWidth : 100;
   let nPixelsRow = nrows * tileHeight;
   let nPixelsCol = ncols * tileWidth;
   let canvas = createCanvas(divWidth, divWidth);
