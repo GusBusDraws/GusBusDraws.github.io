@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-04
+- Add Smallweb Subway page
 ### 2024-02-13
 - Make new CSS class for link tiles
 - Slightly tweak RPS button size and spacing
