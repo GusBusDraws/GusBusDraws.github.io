@@ -1,0 +1,108 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smallweb Subway</title>
+  <script src="/p5.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header id="headerArea">
+      <nav id="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/doodlebot">DoodleBot</a></li>
+            <li><a href="/links">Links</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="main-title">
+        <h1>Smallweb Subway</h1>
+      </div>
+
+      <div class="app">
+        <div class="p5-sketch" id="map">
+          <script src="subway-map.js"></script>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h2>What is this?</h2>
+        <p>
+          The Smallweb Subway is an experimental project that seeks to connect
+          communities online using webrings.
+          A webring is a list of websites that are linked together in a circular
+          structure. The usage of webrings dates back to the early days of the
+          internet before search engines were widely adopted and when there
+          were no big social media
+          platforms with discovery algorithms. Webrings were ways for people to discover
+          new sites by clicking through links on websites that people
+          coordinated to connect with sites that may be grouped by some shared
+          theme or interest.
+          In the day of Large Social Media and The Algorithm, this kind of
+          personal connection feels like a lifeboat in the turbulent sea of
+          internet chatter. To me, these connections offer a sense of place
+          that is more human than what can be offered by the large platforms.
+        </p>
+        <p>
+          The term "smallweb" or "indie web" is often used to refer to the
+          portion of the larger internet that includes hobby websites
+          maintained by one person or a small team for purposes other than
+          trying to sell things. The subway system theme is used as a metaphor
+          and as a way to make the internet feel connected and like
+          something that can have neighborhoods!
+        </p>
+      </div>
+
+
+      <div class="tile">
+        <h2>How does this webring work?</h2>
+        <p>
+          By the power of community! And also JavaScript! Since it would take a lot of
+          coordination to constantly ask folks to update the links on their website
+          every time a new site gets added/removed from the webring, a little snippet
+          of code was written by Gus (with the help of a few resources) to look up
+          a single file hosted on GitHub to determine which links should go before and
+          after each site. This means that after the code is added to someone's website,
+          all the heavy lifting regarding link management will be handled automatically!
+          It also means that anybody can submit a request to add their site to the
+          webring by submitting a pull request at the
+          [Space Turtle GitHub Repo](https://github.com/GusBusDraws/space-turtle-webring).
+          If you'd like some help adding your site to the webring,
+          you can also email Gus at smallwebsubway at gmail dot com.
+        </p>
+        <p>
+          This is a work in progress, so right now the Smallweb Subway is only made up
+          of a single line (webring), but eventually I plan to add more interest-based
+          lines and a map to visualize the connectivity of the lines.
+        </p>
+      </div>
+    </main>
+
+    <section class="right-sidebar">
+      <h2>Button</h2>
+      <p>You're welcome to link to my site with the following button:</p>
+      <a href="https://gusbus.space" target="_blank"><img src="/images/gusbus-88x31.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+      <p>If you do link to my site, let me know so I can link back!</p>
+      <h2>Other Links</h2>
+      <p>Here are some other places to find Gus across the web:</p>
+      <ul>
+        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+      </ul>
+      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+    </section>
+
+    <footer id="footer">
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
