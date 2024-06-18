@@ -406,26 +406,31 @@ function mouseReleased() {
       // If mouse is within the radius of a station AND the station index is
       // non-zero, i.e. a station point and not a line point, set the station
       // bow to be drawn by drawStationBox()
-      if ((mouseDist < stationDiameter / 2)) {
-        if (selection != null && selection.stationName === station.name) {
-          // let station = getSelectedStation(lines, selection);
-          console.log('Visiting station: '+station.name);
-          window.open('https://'+station.url);
-          mouseIsPressed = false;
-        } else {
-          console.log('Setting selection: ' + station.name)
-          selection = {
-            'lineName' : l.name,
-            'stationName' : station.name,
-            'type' : 'click'
-          }
-          drawInfoBox(l.name, station.name);
-          isFound = true
+      if (
+        selection != null
+        && selection.stationName === station.name
+        && selection.nclicked >= 3
+      ) {
+        // Only visit station if a double click follows the initial click
+        console.log('Visiting station: '+station.name);
+        window.open('https://'+station.url);
+        mouseIsPressed = false;
+      } else if (
+        selection != null
+        && selection.stationName === station.name
+        && selection.nclicked < 3
+      ) {
+        selection.nclicked ++
+      } else {
+        console.log('Setting selection: ' + station.name)
+        selection = {
+          'lineName' : l.name,
+          'stationName' : station.name,
+          'type' : 'click',
+          'nclicked' : 1
         }
-      }
-      if (isFound) {
-        // If marked as found, break out of loop through stations
-        break;
+        drawInfoBox(l.name, station.name);
+        isFound = true
       }
     }
     if (isFound) {
