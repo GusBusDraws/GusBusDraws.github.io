@@ -3,6 +3,10 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-18
+- Update yellow to '#fad447'
+- Update green to '#25b233'
+- Update selection to count number of clicks to test `mousePressed` on mobile
 ### 2024-06-17
 - Update link & embed related to Doodle Crew line
 - Add Creatives Club line to the Smallweb Subway page
