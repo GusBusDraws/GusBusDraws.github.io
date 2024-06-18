@@ -8,7 +8,7 @@ let greenJSON = [
   },
   {
     "name" : "Jazz's Doodles",
-    "url" : "jazz-dude.com/Portfolio/doodles.html",
+    "url" : "jazz-dude.com/index.html",
     "owner" : "Jazz"
   },
   {
@@ -35,17 +35,17 @@ let greenJSON = [
 let yellowJSON = [
   {
     "name" : "Creatives Club",
-    "url" : "creativesclub.art",
+    "url" : "creativesclub.art/",
     "owner" : "Gus Becker"
   },
   {
     "name" : "urlocalcyb.org",
-    "url" : "urlocalcyb.org",
+    "url" : "urlocalcyb.org/",
     "owner" : "cyborgforty"
   },
   {
     "name" : "haystack blog and oddities",
-    "url" : "thatoddhaystack.neocities.org",
+    "url" : "thatoddhaystack.neocities.org/",
     "owner" : "vita"
   },
   {
