@@ -3,6 +3,9 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-17
+- Update link & embed related to Doodle Crew line
+- Add Creatives Club line to the Smallweb Subway page
 ### 2024-06-05
 - Increase max-width to 1200px
 - Make sidebar a quarter of the width instead of a third
