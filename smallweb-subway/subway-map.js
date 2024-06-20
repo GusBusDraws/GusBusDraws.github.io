@@ -410,7 +410,7 @@ function mouseReleased() {
         if (
           selection != null
           && selection.stationName === station.name
-          && selection.nclicked >= 2
+          && selection.nclicked >= 4
         ) {
           // Only visit station if a double click follows the initial click
           console.log('Visiting station: '+station.name);
@@ -419,7 +419,7 @@ function mouseReleased() {
         } else if (
           selection != null
           && selection.stationName === station.name
-          && selection.nclicked < 2
+          && selection.nclicked < 4
         ) {
           selection.nclicked ++
           drawInfoBox(l.name, station.name);
