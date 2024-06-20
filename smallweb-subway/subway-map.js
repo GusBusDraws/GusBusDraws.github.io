@@ -139,7 +139,7 @@ function setup() {
 function draw() {
 	background(100);
   drawMap(lines);
-  checkStationHover(lines);
+  // checkStationHover(lines);
   if (selection != null) {
     console.log('Drawing selection')
     drawInfoBox(selection.lineName, selection.stationName);
@@ -407,21 +407,13 @@ function mouseReleased() {
       // non-zero, i.e. a station point and not a line point, set the station
       // bow to be drawn by drawStationBox()
       if ((mouseDist < stationDiameter / 2)) {
-        if (
-          selection != null
-          && selection.stationName === station.name
-          && selection.nclicked >= 4
-        ) {
-          // Only visit station if a double click follows the initial click
-          console.log('Visiting station: '+station.name);
-          window.open('https://'+station.url);
-          isFound = true
-        } else if (
-          selection != null
-          && selection.stationName === station.name
-          && selection.nclicked < 4
-        ) {
-          selection.nclicked ++
+        // if (selection != null && selection.stationName === station.name) {
+        //   // Only visit station if a double click follows the initial click
+        //   console.log('Visiting station: '+station.name);
+        //   window.open('https://'+station.url);
+        //   isFound = true
+        // } else
+        if (selection != null && selection.stationName === station.name) {
           drawInfoBox(l.name, station.name);
           isFound = true
         } else {
@@ -429,8 +421,6 @@ function mouseReleased() {
           selection = {
             'lineName' : l.name,
             'stationName' : station.name,
-            'type' : 'click',
-            'nclicked' : 1
           }
           drawInfoBox(l.name, station.name);
           isFound = true
