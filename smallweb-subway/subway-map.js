@@ -139,7 +139,7 @@ function setup() {
 function draw() {
 	background(100);
   drawMap(lines);
-  // checkStationHover(lines);
+  checkStationHover(lines);
   if (selection != null) {
     console.log('Drawing selection')
     drawInfoBox(selection.lineName, selection.stationName);
