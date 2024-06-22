@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-22
+- Add poetry line to Smallweb Subway page
 ### 2024-06-18
 - Update yellow to '#fad447'
 - Update green to '#25b233'
