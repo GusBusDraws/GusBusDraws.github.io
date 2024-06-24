@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-06-24
+- Add creatives club line to DoodleBot page
 - Add zines line and reorder in color order
 ### 2024-06-22
 - Add poetry line to Smallweb Subway page
