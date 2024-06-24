@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-24
+- Add zines line and reorder in color order
 ### 2024-06-22
 - Add poetry line to Smallweb Subway page
 ### 2024-06-18
