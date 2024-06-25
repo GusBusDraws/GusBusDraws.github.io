@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-06-25
+- Reorder zines and poetry lines following color swap
 - Add simplified version of map drawing that now includes all the lines
 ### 2024-06-24
 - Add creatives club line to DoodleBot page
