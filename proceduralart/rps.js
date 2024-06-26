@@ -25,9 +25,9 @@ let values = {
   'scissors' : scissors
 }
 let colors = {
-  'rock' : '#f0f921',
-  'paper' : '#cb4779',
-  'scissors' : '#100887'
+  'rock' : '#00ff00',
+  'paper' : '#ff0000',
+  'scissors' : '#0000ff'
 }
 let pen = 'rock';
 
