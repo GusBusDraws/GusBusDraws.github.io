@@ -3,6 +3,10 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-06-27
+- Update map hover/click/touch logic to match subway-map repo
+- Scale map text with width
+- Update smallway text
 ### 2024-06-25
 - Reorder zines and poetry lines following color swap
 - Add simplified version of map drawing that now includes all the lines
