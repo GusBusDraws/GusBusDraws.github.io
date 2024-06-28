@@ -25,12 +25,12 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 6;
+let comicsWidth = 5;
 let comicsHeight = 7;
 let comicsPts = [
-  [1, 0], [comicsWidth - 3, 0],
-  [comicsWidth - 2, 1], [comicsWidth - 2, comicsHeight - 2],
-  [comicsWidth - 3, comicsHeight - 1], [1, comicsHeight - 1],
+  [1, 0], [comicsWidth - 2, 0],
+  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],
+  [comicsWidth - 2, comicsHeight - 1], [1, comicsHeight - 1],
   [1, comicsHeight - 1], [0, comicsHeight - 2],
   [0, 1], [1, 0]
 ]
@@ -195,6 +195,12 @@ function draw() {
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    {
+      "title" : "yukiclarke.com",
+      "url" : "www.yukiclarke.com/home/",
+      "owner" : "Yuki Clarke",
+      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
     },
     // Green : Doodle Crew Line
     {
