@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-06-28
+- Add Yuki's site to CC and Comics on map
 - Add dead.garden/zines to Zines Line on map
 - Add dead.garden/poetry to Poetry Line on map
 ### 2024-06-27
