@@ -3,7 +3,7 @@
 let lineWidth;
 let stationDist;
 let stations = [];
-let dcWidth = 7;
+let dcWidth = 9;
 let dcHeight = 7;
 let dcPts = [
   [1, 0], [dcWidth - 2, 0],
@@ -36,16 +36,18 @@ let comicsPts = [
 ]
 let comicsOffset = [];
 let comicsScale;
+let poetryWidth = 7;
+let poetryHeight = 5;
 let poetryPts = [
-  [1, 0], [3, 0],
-  [4, 1], [4, 3.15],
-  [3.15, 4], [1, 4],
-  [1, 4], [0, 3],
+  [1, 0], [poetryWidth-2, 0],
+  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
+  [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
+  [1, poetryHeight-1], [0, poetryHeight-2],
   [0, 1], [1, 0]
 ]
 let poetryOffset = [];
 let poetryScale;
-let zinesWidth = 7;
+let zinesWidth = 9;
 let zinesHeight = 5;
 let zinesPts = [
   [1, 0], [zinesWidth - 2, 0],
@@ -68,7 +70,7 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/6, height/4];
+  dcOffset = [width/10, height/4];
   lineWidth = width * 0.015
 }
 
@@ -83,8 +85,8 @@ function draw() {
    // Orange : Comics Line //
   //////////////////////////
   comicsOffset[0] = (
-    min(dcScaledX)
-    + 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    max(dcScaledX)
+    - 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -141,7 +143,7 @@ function draw() {
       'title' : 'Smallweb Subway',
       'url' : 'gusbus.space/smallweb-subway/',
       'owner' : 'Gus Becker',
-      'pt' : getScaledPt([6, 4], dcOffset, dcScale, [0, -lineWidth/2])
+      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, -lineWidth/2])
     },
     // Blue : Zines Line
     {
@@ -155,6 +157,12 @@ function draw() {
       "url" : "mythicaltype.com/zines/",
       "owner" : "Mythical Type",
       "pt" : getScaledPt([4, 4], zinesOffset, zinesScale, [0, 0]),
+    },
+    {
+      "title" : "dead zines",
+      "url" : "dead.garden/zines/",
+      "owner" : "jo",
+      "pt" : getScaledPt([6, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
     },
     // Yellow : Creatives Club Line
     {
@@ -209,6 +217,12 @@ function draw() {
       "url" : "columbidaecorner.neocities.org/poetry",
       "owner" : "columbidaecorner",
       "pt" : getScaledPt([0, 2], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "poems",
+      "url" : "dead.garden/poetry/",
+      "owner" : "jo",
+      "pt" : getScaledPt([3, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   drawStations(stations);
