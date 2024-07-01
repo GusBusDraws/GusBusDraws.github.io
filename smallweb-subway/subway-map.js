@@ -164,6 +164,12 @@ function draw() {
       "owner" : "jo",
       "pt" : getScaledPt([6, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
     },
+    {
+      "title" : "MyDogStoleThisWebsite",
+      "url" : "metrogoldia.neocities.org/",
+      "owner" : "MyDogStoleMyLiver",
+      "pt" : getScaledPt([2, 0], zinesOffset, zinesScale, [0, 0])
+    },
     // Yellow : Creatives Club Line
     {
       "title" : "DoodleBot",
