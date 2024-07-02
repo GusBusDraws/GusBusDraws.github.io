@@ -3,6 +3,9 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-07-02
+- Add condition for splitting title & author when long on map
+- Add Ultraviolents to the Comics Line on map
 ### 2024-07-01
 - Add MyDogStoleThisWebsite to the Zines Line
 ### 2024-06-28

@@ -167,7 +167,7 @@ function draw() {
     {
       "title" : "MyDogStoleThisWebsite",
       "url" : "metrogoldia.neocities.org/",
-      "owner" : "MyDogStoleMyLiver",
+      "owner" : "MyDogStoleMyLiver (Devin Spector)",
       "pt" : getScaledPt([2, 0], zinesOffset, zinesScale, [0, 0])
     },
     // Yellow : Creatives Club Line
@@ -201,6 +201,12 @@ function draw() {
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "yukiclarke.com",
@@ -356,7 +362,6 @@ function drawInfoBox(selection) {
   stroke(255);
   fill(0, 0);
   circle(x, y, lineWidth * 2.5);
-  fill(255);
   let boxW = 26 * lineWidth;
   let boxH = 5 * lineWidth;
   let boxX;
@@ -377,14 +382,25 @@ function drawInfoBox(selection) {
   selection.boxYMin = boxY;
   selection.boxXMax = boxX + boxW;
   selection.boxYMax = boxY + boxH;
-  rect(boxX, boxY, boxW, boxH);
   noStroke();
-  fill(0);
   textSize(0.017 * width)
   textFont('Consolas')
   textAlign(LEFT, TOP)
-  text(title + ' by ' +owner, boxX + lineWidth, boxY + lineWidth)
-  text(url, boxX + lineWidth, boxY + 3*lineWidth);
+  let desc = title + ' by ' + owner;
+  if (desc.length < 38) {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH);
+    fill(0);
+    text(desc, boxX + lineWidth, boxY + lineWidth)
+    text(url, boxX + lineWidth, boxY + 3*lineWidth);
+  } else {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH+2*lineWidth);
+    fill(0);
+    text(title, boxX + lineWidth, boxY + lineWidth)
+    text("by "+owner, boxX + lineWidth, boxY + 3*lineWidth)
+    text(url, boxX + lineWidth, boxY + 5*lineWidth);
+  }
 }
 
 function touchStarted() {
