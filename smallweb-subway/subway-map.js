@@ -203,6 +203,12 @@ function draw() {
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
     },
     {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
       "title" : "yukiclarke.com",
       "url" : "www.yukiclarke.com/home/",
       "owner" : "Yuki Clarke",
