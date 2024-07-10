@@ -58,7 +58,19 @@ let zinesPts = [
 ]
 let zinesOffset = [];
 let zinesScale;
+// let sfWidth = 9;
+// let sfHeight = 7;
+// let sfPts = [
+//   [1, 0], [sfWidth - 2, 0],
+//   [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 2],
+//   [sfWidth - 2, sfHeight - 1], [1, sfHeight - 1],
+//   [1, sfHeight - 1], [0, sfHeight - 2],
+//   [0, 1], [1, 0]
+// ]
+// let sfOffset = [];
+// let sfScale;
 let DEBUG = false;
+// let DEBUG = true;
 let selection;
 
 function setup() {
@@ -107,6 +119,7 @@ function draw() {
   zinesOffset[1] = (
     min(dcScaledY)
     + 4 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + lineWidth
   );
   zinesScale = [stationDist, stationDist];
   let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
@@ -134,6 +147,19 @@ function draw() {
   ccOffset[1] = dcOffset[1];
   ccScale = [stationDist, stationDist];
   let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
+  //   /////////////////////////
+  //  // Silver : Scifi Line //
+  // /////////////////////////
+  // sfOffset[0] = (
+  //   min(dcScaledX)
+  //   + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+  // );
+  // sfOffset[1] = (
+  //   min(dcScaledY)
+  //   - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
+  // );
+  // sfScale = [stationDist, stationDist];
+  // let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
     //////////////
    // Stations //
   //////////////
