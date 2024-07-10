@@ -1,0 +1,109 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scifi Gallery</title>
+  <!--
+    This script looks for anything with class="gallery" and assumes it
+    will have a linked image followed by a caption, as formatted below,
+    to make its list of images to put in the slideshow.
+  -->
+  <script src="https://gusbus.space/smallweb-subway.js/scifi.js"></script>
+  <script defer src="gallery.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header id="headerArea">
+      <nav id="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/doodlebot">DoodleBot</a></li>
+            <li><a href="/smallweb-subway/">Smallway</a></li>
+            <li><a href="/links">Links</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <!-- full screen overlay to show bigger versions of the art -->
+    <div id="overlay">
+      <!-- the control buttons -->
+      <button onclick="closeOverlay()" class="overlay-control" id="overlay-close" aria-label="close">x</button>
+      <button class="overlay-control" id="overlay-prev" aria-label="previous">&lt;</button>
+      <button class="overlay-control" id="overlay-next" aria-label="next">&gt;</button>
+      <!-- the image -->
+      <img id="overlay-img" />
+      <!-- the caption -->
+    </div>
+
+    <main class="main-content">
+      <div class="main-title">
+        <h1>Scifi Gallery</h1>
+      </div>
+
+      <div class="tile">
+        <p>
+          Here are some  of my scifi drawings!
+        </p>
+
+        <div id="gal_flex">
+          <!-- copy & paste the gallery div below and fill in the link, image, alt text, and caption information for each image. The image source can be a thumbnail, but the linked image in the a tag should be the full size image, because it's used in the slideshow.
+
+              <div class="gallery">
+                <a target="_blank" href=".jpg">
+                <img src=".jpg" alt="">
+                </a>
+                <div class="desc">[caption]</div>
+              </div>
+          -->
+
+          <!-- Sleepy Goblin -->
+          <div class="gallery">
+            <a target="_blank" href="https://lh3.googleusercontent.com/d/1_2Ob1u5UUCFaAG4lQRn6NEMoiWYpcTqT">
+            <!-- <img src="https://drive.google.com/thumbnail?export=view&id=1_2Ob1u5UUCFaAG4lQRn6NEMoiWYpcTqT" -->
+            <!-- Deprecated: -->
+            <!-- <img src="https://drive.google.com/host/1_NemsrtQ0Aod7diNau0ECXtMGfA1xIDz/sleepy-goblin-bus-driver.png" -->
+            <img src="https://lh3.googleusercontent.com/d/1_2Ob1u5UUCFaAG4lQRn6NEMoiWYpcTqT"
+              alt="A sleepy goblin driving a bus on tracks with a bug alien and robot visible in the back.">
+            </a>
+          </div>
+
+        </div>
+
+        <div>
+          <p>
+            To check out some other websites with scifi work, you can explore
+            the Scifi Line on the
+            <a target="_blank" href="/smallweb-subway/">Smallweb Subway</a>.
+          </p>
+          <smallweb-subway-scifi></smallweb-subway-scifi>
+        </div>
+
+      </div>
+
+    </main>
+
+    <section class="right-sidebar">
+      <h2>Button</h2>
+      <p>You're welcome to link to my site with the following button:</p>
+      <a href="https://gusbus.space" target="_blank"><img src="/images/gusbus-88x31.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+      <p>If you do link to my site, let me know so I can link back!</p>
+      <h2>Other Links</h2>
+      <p>Here are some other places to find Gus across the web:</p>
+      <ul>
+        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+      </ul>
+      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+    </section>
+
+    <footer id="footer">
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
