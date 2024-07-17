@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-07-17
+- Add map with Scifi Line from [Smallway repo](https://github.com/GusBusDraws/smallweb-subway.js)
 ### 2024-07-09
 - Begin working on adding Scifi Line to Smallway map
 - Add Scifi Gallery page to include in the Scifi Line of the Smallway
