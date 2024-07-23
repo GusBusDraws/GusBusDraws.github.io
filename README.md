@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-07-23
+- Add Procreate Workshop link to Links page
 ### 2024-07-19
 - Add doodlecrew smallway widget to Scifi Gallery
 ### 2024-07-17
