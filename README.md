@@ -3,10 +3,12 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-08-08
+- Redo homepage banners to match full size as defined [here](https://i.pinimg.com/originals/b1/8b/78/b18b78afb5cc96bad9bb22ece6129430.gif)
 ### 2024-07-23
 - Add Procreate Workshop link to Links page
 ### 2024-07-19
-- Add doodlecrew smallway widget to Scifi Gallery
+- Add doodlecrew Smallway widget to Scifi Gallery
 ### 2024-07-17
 - Add map with Scifi Line from [Smallway repo](https://github.com/GusBusDraws/smallweb-subway.js)
 ### 2024-07-09
