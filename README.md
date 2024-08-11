@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-08-11
+- Add [Ayano's comment widget](https://virtualobserver.moe/ayano/comment-widget) to homepage
 ### 2024-08-10
 - Update DoodleBot page to incorporate a select keyword drop down menu
 ### 2024-08-08
