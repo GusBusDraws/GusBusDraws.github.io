@@ -161,3 +161,15 @@ function checkGrammar(prompt) {
   return words.join(' ')
 }
 
+function select() {
+  let input = document.getElementById('doodlebot-input').value;
+  let selectedKeyword = document.getElementById("doodlebot-select").value
+  if (selectedKeyword != '') {
+    let currentPrompt = input + '%' + selectedKeyword + ' '
+    document.getElementById("doodlebot-input").value = currentPrompt;
+  }
+}
+
+function clearPrompt() {
+    document.getElementById("doodlebot-input").value = '';
+}
