@@ -17,7 +17,7 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = '/comments/comment-widget-gbs.css';
+const s_stylePath = '/utils/comment-widget-gbs.css';
 const s_formId = '1FAIpQLSe66LdGcIvzcBaI9vtyAvcNx0DgLC_llb0YFLXWf5JDszweeA';
 const s_nameId = '1150627375';
 const s_websiteId = '1978087598';
