@@ -10,7 +10,7 @@
     (But change the script src URL to wherever you have this widget stored on your site!)
 
         <div id="c_widget"></div>
-        <script src="/comments/comment-widget.js"></script>
+        <script src="/utils/comment-widget.js"></script>
 
     Have fun! Bug reports are encouraged if you happen to run into any issues.
     - Ayano (https://virtualobserver.moe/)
