@@ -1,7 +1,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galactic Transitway</title>
+  <title>Scifi Gallery</title>
+  <!--
+    This script looks for anything with class="gallery" and assumes it
+    will have a linked image followed by a caption, as formatted below,
+    to make its list of images to put in the slideshow.
+  -->
+  <script defer src="/utils/gallery.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -12,21 +18,115 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/doodlebot">DoodleBot</a></li>
-            <li><a href="/smallweb-subway/">Smallweb Subway</a></li>
+            <li><a href="/smallweb-subway/">Smallway</a></li>
             <li><a href="/links">Links</a></li>
           </ul>
       </nav>
     </header>
 
+    <!-- full screen overlay to show bigger versions of the art -->
+    <div id="overlay">
+      <!-- the control buttons -->
+      <button onclick="closeOverlay()" class="overlay-control" id="overlay-close" aria-label="close">x</button>
+      <button class="overlay-control" id="overlay-prev" aria-label="previous">&lt;</button>
+      <button class="overlay-control" id="overlay-next" aria-label="next">&gt;</button>
+      <!-- the image -->
+      <img id="overlay-img" />
+      <!-- the caption -->
+    </div>
+
     <main class="main-content">
       <div class="main-title">
-        <h1>The Galactic Transitway</h1>
+        <h1>Galactic Transitway</h1>
       </div>
+
       <div class="tile">
         <p>
-          Project description coming soon!
+          The Galactic Transitway is a worldbuilding project of mine. The idea
+          is based on a scifi infrastructure maintenence crew. The idea is that
+          they'd travel the galaxy on adventures involving infrastructure, like
+          the wormhole gates that connect the citizens of the Transitway!
+        </p>
+        <p>
+          Below are some drawings that I've made as I start putting the pieces
+          of this world and its inhabitants together.
         </p>
       </div>
+
+      <div class="tile">
+
+        <div id="gal_flex">
+          <!-- copy & paste the gallery div below and fill in the link, image, alt text, and caption information for each image. The image source can be a thumbnail, but the linked image in the a tag should be the full size image, because it's used in the slideshow.
+          <div class="gallery">
+            <a target="_blank" href="https://lh3.googleusercontent.com/d/">
+            <img src="https://lh3.googleusercontent.com/d/"
+              alt="">
+            </a>
+          </div>
+          -->
+
+          <!-- Cyber Ghost and Gordon -->
+          <div class="gallery">
+            <a target="_blank" href="https://lh3.googleusercontent.com/d/1oWnWC_WVEfUa09oweD9TcBpzKkjz7odx">
+            <img src="https://lh3.googleusercontent.com/d/1oWnWC_WVEfUa09oweD9TcBpzKkjz7odx"
+              alt="A ghost in a space suit and a grumpy looking bug-like alien.">
+            </a>
+          </div>
+
+          <!-- Portal ship -->
+          <div class="gallery">
+            <a target="_blank" href="https://lh3.googleusercontent.com/d/15ERxRR4BBj-dt-NjCkKTVWjJn_l86mTC">
+            <img src="https://lh3.googleusercontent.com/d/15ERxRR4BBj-dt-NjCkKTVWjJn_l86mTC"
+              alt="A spaceship with two manipulator arms floating over a glowing portal.">
+            </a>
+          </div>
+
+          <!-- Lift mech -->
+          <div class="gallery">
+            <a target="_blank" href="https://lh3.googleusercontent.com/d/164romt5O-1wnBodPEHp-HbMkf9cNOSOX">
+            <img src="https://lh3.googleusercontent.com/d/164romt5O-1wnBodPEHp-HbMkf9cNOSOX"
+              alt="An alien in a big construction mech with another character on the ground beside them.">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tile">
+        <h2>Want to use this gallery format?</h2>
+        <p>
+          This gallery was made possible by modifying Varve's
+          "Gallery with slideshow" code. You can download a zip of all the
+          files necessary for free
+          (for non-commercial use) on the
+          <a target="_blank" href="https://www.write-on.org/tools/">Bits & Tools</a>
+          page of their site!
+        </p>
+      </div>
+
     </main>
+
+    <section class="right-sidebar">
+      <h2>Button</h2>
+      <p>You're welcome to link to my site with the following button:</p>
+      <a href="https://gusbus.space" target="_blank"><img src="/images/gusbus-88x31.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+      <p>If you do link to my site, let me know so I can link back!</p>
+      <h2>Other Links</h2>
+      <p>Here are some other places to find Gus across the web:</p>
+      <ul>
+        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+      </ul>
+      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+    </section>
+
+    <footer id="footer">
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
+    </footer>
   </div>
 </body>

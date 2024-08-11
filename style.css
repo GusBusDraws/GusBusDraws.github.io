@@ -18,6 +18,7 @@ the images as variables */
     --console-trans: #105817;
     --console-hover: #ffffff;
     --console-bg: #0a291c;
+    --grey-bg: #6A7C8F;
     --prev-content: #43256E;
     --prev-header-color: #5e4e8c;
     --prev-border-color: #ED64F5;
@@ -177,6 +178,14 @@ main {
     padding: 0px;
     /* padding-right: 0px; */
     margin: 5px;
+}
+
+.grey-tile {
+    background-color: var(--grey-bg);
+    border: 1px solid var(--console-highlights);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
 }
 
 .center {
