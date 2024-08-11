@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-08-10
+- Update DoodleBot page to incorporate a select keyword drop down menu
 ### 2024-08-08
 - Redo homepage banners to match full size as defined [here](https://i.pinimg.com/originals/b1/8b/78/b18b78afb5cc96bad9bb22ece6129430.gif)
 ### 2024-07-23

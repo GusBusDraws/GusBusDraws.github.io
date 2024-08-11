@@ -173,6 +173,12 @@ main {
     margin: 10px;
 }
 
+.tile-no-border {
+    padding: 0px;
+    /* padding-right: 0px; */
+    margin: 5px;
+}
+
 .center {
     text-align: center;
     align-items: center;
@@ -328,6 +334,21 @@ textarea {
     padding: 5px;
     margin: 5px;
     resize: vertical;
+}
+
+.doodlebot select {
+    /* display: block; */
+    font-family: 'Fira mono', monospace;
+    border: 1px solid var(--console-highlights);
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+}
+
+.doodlebot select option:hover{
+    background-color: #1BA1E2 !important;
 }
 
 .doodlebot button {

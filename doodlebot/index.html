@@ -21,8 +21,10 @@
     </header>
 
     <main class="main-content">
-      <div class="doodlebot">
-        <h2>DoodleBot</h2>
+      <div class="main-title">
+        <h1>DoodleBot</h1>
+      </div>
+      <div class="main-title">
         <p>
           Since the invention of the pencil, people have asked the age old
           question: What should I draw?
@@ -31,21 +33,79 @@
         <p>
           DoodleBot is a prompt-generation bot that helps reduce friction when
           making art. Feel free to post any DoodleBot inspired creations on the
-          subreddit <a href="https://reddit.com/r/DoodleBot" target="_blank">r/DoodleBot</a>!
+          subreddit <a href="https://reddit.com/r/DoodleBot" target="_blank">r/DoodleBot</a>
+          or tag @gusbusdraws if you post somewhere else!
         </p>
         <p>
-          Enter a prompt below, or use the command "!help" to learn how to
-          generate a prompt. The command "!keywords" will list the available
-          keywords that can be used.
+          Select keywords from the drop down menu below, then press
+          "Generate prompt" to have DoodleBot give you a prompt from the
+          structure. You can type other words between the keywords! Try pressing
+          "Random prompt" to get a few examples.
         </p>
-        <div>
+      </div>
+      <div class="doodlebot">
+        <div class="tile-no-border">
+          <select name="pets" id="doodlebot-select">
+            <option value="">Select a keyword</option>
+            <option value="animal">              animal</option>
+            <option value="amphibian">           &nbsp;&nbsp;amphibian</option>
+            <option value="bird">                &nbsp;&nbsp;bird</option>
+            <option value="bug">                 &nbsp;&nbsp;bug</option>
+            <option value="crustacean">          &nbsp;&nbsp;crustacean</option>
+            <option value="fish">                &nbsp;&nbsp;fish</option>
+            <option value="invertebrate">        &nbsp;&nbsp;invertebrate</option>
+            <option value="mammal">              &nbsp;&nbsp;mammal</option>
+            <option value="reptile">             &nbsp;&nbsp;reptile</option>
+            <option value="any-creature">        any-creature</option>
+            <option value="cryptid">             &nbsp;&nbsp;cryptid</option>
+            <option value="fantasy-creature">    &nbsp;&nbsp;fantasy-creature</option>
+            <option value="scifi-creature">      &nbsp;&nbsp;scifi-creature</option>
+            <option value="any-class">           any-class</option>
+            <option value="fantasy-class">       &nbsp;&nbsp;fantasy-class</option>
+            <option value="scifi-class">         &nbsp;&nbsp;scifi-class</option>
+            <option value="any-item">            any-item</option>
+            <option value="fantasy-item">        &nbsp;&nbsp;fantasy-item</option>
+            <option value="irl-item">            &nbsp;&nbsp;irl-item</option>
+            <option value="scifi-item">          &nbsp;&nbsp;scifi-item</option>
+            <option value="food-item">           &nbsp;&nbsp;food-item</option>
+            <option value="clothing">            clothing</option>
+            <option value="headwear">            &nbsp;&nbsp;headwear</option>
+            <option value="upper-torso-clothing">&nbsp;&nbsp;upper-torso-clothing</option>
+            <option value="lower-torso-clothing">&nbsp;&nbsp;lower-torso-clothing</option>
+            <option value="footwear">            &nbsp;&nbsp;footwear</option>
+            <option value="any-location">        any-location</option>
+            <option value="fantasy-location">    &nbsp;&nbsp;fantasy-location</option>
+            <option value="scifi-location">      &nbsp;&nbsp;scifi-location</option>
+            <option value="irl-location">        &nbsp;&nbsp;irl-location</option>
+            <option value="cosmic-location">     &nbsp;&nbsp;cosmic-location</option>
+            <option value="body-part">           body-part</option>
+            <option value="emotion">             emotion</option>
+            <option value="adjective">           adjective</option>
+            <option value="color">               color</option>
+            <option value="field-of-study">      field-of-study</option>
+            <option value="job">                 job</option>
+            <option value="accessory">           accessory</option>
+            <option value="food">                food</option>
+            <option value="food-material">       food-material</option>
+            <option value="material">            material</option>
+            <option value="inanimate-object">    inanimate-object</option>
+            <option value="active-ing-verb">     active-ing-verb</option>
+            <option value="passive-ing-verb">    passive-ing-verb</option>
+            <option value="adverb">              adverb</option>
+            <option value="biome">               biome</option>
+            <option value="pokemon">             pokemon</option>
+          </select>
+          <button id="select-button" onclick="select()">Insert keyword</button>
+        </div>
+        <div class="tile-no-border">
           <textarea id="doodlebot-input" maxlength="512"></textarea>
         </div>
-        <div>
+        <div class="tile-no-border">
           <button id="gen-button" onclick="generate()">Generate prompt</button>
+          <button id="clear-button" onclick="clearPrompt()">Clear prompt</button>
           <button id="rand-button" onclick="getRandomPrompt()">Random prompt</button>
         </div>
-        <div>
+        <div class="tile-no-border">
           <label id="doodlebot-label"></label>
         </div>
       </div>
