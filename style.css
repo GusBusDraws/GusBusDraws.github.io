@@ -18,6 +18,7 @@ the images as variables */
     --console-trans: #105817;
     --console-hover: #ffffff;
     --console-bg: #0a291c;
+    --grey-bg: #6A7C8F;
     --prev-content: #43256E;
     --prev-header-color: #5e4e8c;
     --prev-border-color: #ED64F5;
@@ -375,6 +376,8 @@ textarea {
 /*////////////////////*/
 
 div#gal_flex { /* who needs device width breakpoints when you have flex wrap */
+    padding-top: 20px;
+    padding-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 60em; /* you can set this wider if you like, or remove it to fill the full width of a large screen. I just like to limit it. */

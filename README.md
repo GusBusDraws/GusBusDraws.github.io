@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2024-08-11
+- Add drawings to the GT page
 - Add [Ayano's comment widget](https://virtualobserver.moe/ayano/comment-widget) to homepage
 ### 2024-08-10
 - Update DoodleBot page to incorporate a select keyword drop down menu

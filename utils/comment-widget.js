@@ -10,14 +10,14 @@
     (But change the script src URL to wherever you have this widget stored on your site!)
 
         <div id="c_widget"></div>
-        <script src="/comments/comment-widget.js"></script>
+        <script src="/utils/comment-widget.js"></script>
 
     Have fun! Bug reports are encouraged if you happen to run into any issues.
     - Ayano (https://virtualobserver.moe/)
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = '/comments/comment-widget-gbs.css';
+const s_stylePath = '/utils/comment-widget-gbs.css';
 const s_formId = '1FAIpQLSe66LdGcIvzcBaI9vtyAvcNx0DgLC_llb0YFLXWf5JDszweeA';
 const s_nameId = '1150627375';
 const s_websiteId = '1978087598';
