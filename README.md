@@ -3,6 +3,9 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2024-08-12
+- Add comments to Smallway page
+- Add comments to DoodleBot page
 ### 2024-08-11
 - Add drawings to the GT page
 - Add [Ayano's comment widget](https://virtualobserver.moe/ayano/comment-widget) to homepage
