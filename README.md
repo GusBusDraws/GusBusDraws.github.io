@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2025-01-23
+- Add email, Bluesky, and Instagram links to sidebar
 ### 2024-08-12
 - Add comments to Smallway page
 - Add comments to DoodleBot page
