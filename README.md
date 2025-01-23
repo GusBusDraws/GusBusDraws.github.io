@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2025-01-23
+- Update Soho's links
 - Add email, Bluesky, and Instagram links to sidebar
 ### 2024-08-12
 - Add comments to Smallway page
