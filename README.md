@@ -3,6 +3,10 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2025-02-05
+- Reorganize buttons into a wall
+- Center GBS button in sidebar
+- Rename buttons to start with "88x31"
 ### 2025-01-23
 - Update Soho's links
 - Add email, Bluesky, and Instagram links to sidebar
