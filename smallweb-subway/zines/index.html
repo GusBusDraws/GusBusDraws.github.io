@@ -1,0 +1,71 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smallway: Zines Line</title>
+  <script src="https://gusbus.space/smallweb-subway.js/zines.js"></script>
+  <script src="/utils/build-index.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header id="headerArea">
+      <nav id="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/doodlebot">DoodleBot</a></li>
+            <li><a href="/links">Links</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="main-title">
+        <h1>Smallway: Zines Line</h1>
+      </div>
+
+      <div class="tile" id="zines-index">
+        <p>
+          Below are all the sites on the Zines Line of the Smallweb Subway.
+        </p>
+        </br>
+        <div class="center">
+          <p>
+            <a href="/smallweb-subway/"><<< Back to full map <<<</a>
+          </p>
+        </div>
+        </br>
+        <script>buildIndex("zines-index", DATA_zines)</script>
+      </div>
+
+    </main>
+
+    <section class="right-sidebar">
+      <h2>Contact</h2>
+      <p>Here are some ways to get in touch with Gus:</p>
+      <ul>
+        <li><a href="mailto:gusbusdraws@gmail.com" target="_blank">gusbusdraws@gmail.com</a></li>
+        <li><a href="https://bsky.app/profile/gusbusdraws.bsky.social" target="_blank">Bluesky</a></li>
+        <li><a href="https://instagram.com/gusbusdraws" target="_blank">Instagram</a></li>
+        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+      </ul>
+      <h2>Button</h2>
+      <p>You're welcome to link to my site with the following button:</p>
+      <div class="center">
+        <a href="https://gusbus.space" target="_blank"><img src="/images/88x31-gusbus.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+      </div>
+      <p>If you do link to my site, let me know so I can link back!</p>
+      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+    </section>
+
+    <footer id="footer">
+      <p>
+        This site template is public domain!
+        <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
+          Access the code
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>

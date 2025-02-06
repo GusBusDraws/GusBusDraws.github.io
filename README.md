@@ -3,7 +3,11 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2025-02-06
+- Add index page for all Smallway lines
+- Generalize `buildIndex()` to work with every line
 ### 2025-02-05
+- Add procedurally generated index for the Smallway Comics Line
 - Reorganize buttons into a wall
 - Center GBS button in sidebar
 - Rename buttons to start with "88x31"
