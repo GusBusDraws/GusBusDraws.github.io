@@ -1,14 +1,9 @@
-function buildIndexComics(obj) {
-  console.log('Building Comics Line index...')
-  let comicsDiv = document.getElementById("comics-index");
+function buildIndex(insertDivID, obj) {
+  // let comicsDiv = document.getElementById("comics-index");
+  let divID = document.getElementById(insertDivID);
 
-  for (let site of DATA_comics) {
-    // comicsDiv.innerHTML += "<div class='tile'>";
-    // comicsDiv.innerHTML += "<p>Title: " + site.title + "</p>";
-    // comicsDiv.innerHTML += "<p>Owner: " + site.owner + "</p>";
-    // comicsDiv.innerHTML += "<p>URL: " + site.url + "</p>";
-    // comicsDiv.innerHTML += "</div>";
-    comicsDiv.innerHTML += `
+  for (let site of obj) {
+    divID.innerHTML += `
       <div class='tile'>
         <p>Title: ` + site.title + `</p>
         <p>Owner: ` + site.owner + `</p>
@@ -18,5 +13,3 @@ function buildIndexComics(obj) {
     `;
   }
 }
-
-buildIndexComics(DATA_comics);
