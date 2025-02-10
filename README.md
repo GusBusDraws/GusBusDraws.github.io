@@ -4,7 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2025-02-10
-- Add Smallway button
+- Add Smallway button to neighbor button wall
+- Add new button images
 - Remove spacing from button walls
 - Add a second button wall for sites that aren't neighbors
 ### 2025-02-06
