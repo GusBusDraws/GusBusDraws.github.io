@@ -180,6 +180,11 @@ main {
     margin: 5px;
 }
 
+.button-wall {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .center {
     text-align: center;
     align-items: center;

@@ -3,6 +3,9 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2025-02-10
+- Remove spacing from button walls
+- Add a second button wall for sites that aren't neighbors
 ### 2025-02-06
 - Add index page for all Smallway lines
 - Generalize `buildIndex()` to work with every line
