@@ -183,6 +183,7 @@ main {
 .button-wall {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .center {

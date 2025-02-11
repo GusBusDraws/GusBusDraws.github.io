@@ -3,6 +3,8 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+### 2025-02-11
+- Center button wall flexes
 ### 2025-02-10
 - Add Smallway button to neighbor button wall
 - Add new button images
