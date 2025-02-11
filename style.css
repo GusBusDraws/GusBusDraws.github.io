@@ -183,6 +183,11 @@ main {
 .button-wall {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-88x31:hover {
+	transform: translateY(-1px);
 }
 
 .center {
