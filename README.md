@@ -4,6 +4,7 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 ### 2025-02-11
+- Add slight movement when buttons hovered
 - Add Lee, Sadgrl, and Giz's buttons
 - Center button wall flexes
 ### 2025-02-10

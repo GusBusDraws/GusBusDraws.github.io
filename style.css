@@ -186,6 +186,10 @@ main {
     justify-content: center;
 }
 
+.button-88x31:hover {
+	transform: translateY(-1px);
+}
+
 .center {
     text-align: center;
     align-items: center;
