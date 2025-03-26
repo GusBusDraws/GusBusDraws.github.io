@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Gus's Blog</title>
+  <description>Updates and art!</description>
+  <link>https://gusbus.space</link>
+  <lastBuildDate>
+    Mon, 24 Mar 2025 12:07:31 -0600
+  </lastBuildDate>
+  <ttl>1440</ttl>
+
+  <!-- Above this is the header, below are each article -->
+
+ <item>
+    <title>Our Journey Begins</title>
+    <description>
+      The start of this blog and Gus and Kaila's journey through Southeast Asia!
+    </description>
+    <link>https://gusbus.space/blog/our-journey-begins</link>
+    <pubDate>
+      Mon, 24 Mar 2025 12:07:31 -0600
+    </pubDate>
+  </item>
+
+<!-- Vietnam time (ICT) is GMT +0700 -->
+
+<!-- End of the article list -->
+
+</channel>
+</rss>
