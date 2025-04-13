@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>Gus's Blog</title>
+  <title>Gus Bus Blog</title>
   <description>Updates and art!</description>
   <link>https://gusbus.space</link>
   <lastBuildDate>
@@ -10,30 +10,46 @@
   <ttl>1440</ttl>
 
   <!-- Above this is the header, below are each article -->
+  
+  <!-- Vietnam time (ICT) is GMT +0700 -->
 
- <item>
+  <item>
+    <title>Happy Water in Hanoi</title>
+    <description>
+      The next leg of our journey involves catching a bus leaving Hanoi, and traveling
+      to Sapa, a town in the northern mountains of Vietnam
+      surrounded by smaller villages and rice terraces.
+      We bought tickets for the bus from our hostel in Hanoi, and they said we would be 
+      picked up just out front. This ended up being half true... I also introduce
+      Cables of the Day in this post!
+    </description>
+    <link>https://gusbus.space/blog/happy-water-sapa</link>
+    <pubDate>
+      Sun, 13 Apr 2025 14:00:00 +0700
+    </pubDate>
+  </item>
+
+  <item>
     <title>Dodging Motorbikes in Hanoi</title>
     <description>
       Recap of how we spent our time in Hanoi, the chaotic capital of Vietnam!
     </description>
     <link>https://gusbus.space/blog/dodging-motorbikes-hanoi</link>
     <pubDate>
-      Mon, 07 Apr 2025 21:31:00 -0600
+      Mon, 07 Apr 2025 21:31:00 +0700
     </pubDate>
   </item>
 
- <item>
+  <item>
     <title>Our Journey Begins</title>
     <description>
       The start of this blog and Gus and Kaila's journey through Southeast Asia!
     </description>
     <link>https://gusbus.space/blog/our-journey-begins</link>
     <pubDate>
-      Mon, 24 Mar 2025 12:07:31 -0600
+      Mon, 24 Mar 2025 12:07:31 +0700
     </pubDate>
   </item>
-
-<!-- Vietnam time (ICT) is GMT +0700 -->
 
 <!-- End of the article list -->
 

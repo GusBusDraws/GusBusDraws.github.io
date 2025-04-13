@@ -171,7 +171,8 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     /* padding: 10px; */
-    margin: 10px;
+    margin: 10px; 
+    text-align: justify;
 }
 
 .tile img {
@@ -181,11 +182,47 @@ main {
   margin-right: auto;
 }
 
+.tile figcaption {
+  text-align: center;
+  font-size: smaller;
+  padding: 10px;
+  opacity: 0.7;
+}
+
 .tile-no-border {
     padding: 0px;
     /* padding-right: 0px; */
     margin: 5px;
 }
+
+.tile-flexer > div {
+    display: flex;
+}
+
+.button-link {
+    /* display: block; */
+    font-family: 'Fira mono', monospace;
+    text-align: center;
+    border: 1px solid var(--console-highlights);
+    background-color: var(--console-trans);
+    color: var(--console-highlights);
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+}
+
+.button-link:hover {
+    outline: 2px solid var(--console-highlights); 
+    color: var(--console-highlights);
+}
+
+.button-link-ghost {
+    font-family: 'Fira mono', monospace;
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+    opacity: 0;
+} 
 
 .button-wall {
     display: flex;
@@ -293,7 +330,12 @@ h3 {
 }
 
 h1 {
-    font-size: 25px;
+    /*font-size: 25px;*/
+    font-size: bigger;
+}
+
+h2 {
+    font-size: big;
 }
 
 strong {

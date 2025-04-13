@@ -3,6 +3,21 @@ This is the source code for the website of Gus Becker deployed at:
 [https://GusBus.Space](https://GusBus.Space)
 
 ## Change Log
+
+### 2025-04-13
+- Add Sapa post to blog index and RSS feed
+- Finish “Happy Water in Sapa” blog post
+### 2025-04-11
+- Add Previous/Next buttons for blog posts
+- Add figure captions for blog posts
+### 2025-04-07
+- Add “Dodging Motorbikes in Hanoi” blog post
+- Add blog post template
+### 2025-03-25
+- Add “Our Journey Begins” blog post
+### 2025-03-24
+- Add RSS feed
+- Add blog
 ### 2025-02-11
 - Add selephida's button
 - Add slight movement when buttons hovered
