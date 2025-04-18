@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-04-17
+- Add Ha Long Bay post
 ### 2025-04-13
 - Change Next/Previous buttons to <<</>>>
 - Add Sapa post to blog index and RSS feed
