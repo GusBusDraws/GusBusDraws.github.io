@@ -4,6 +4,10 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-04-27
+- Add WIP posts for Central Highlands, Saigon, and Cambodia
+- Rename ‘template.hmtl’ and add comments to distinguish sections
+- Add completed Ninh Binh and Phong Nha post
 ### 2025-04-17
 - Add Ha Long Bay post
 ### 2025-04-13
