@@ -7,6 +7,7 @@ This is the source code for the website of Gus Becker deployed at:
 ### 2025-06-17
 - Add VHS bot to sidebar of newer pages
 - Prepare Hoi An/Da Nang blog for posting
+- Add line length markers to blog template file
 ### 2025-05-13
 - Finish all but photos of Cambodia II: Siem Reap post
 - Finish all but photos Cambodia I: Tuk Tuks from Capital to Coast post
