@@ -240,6 +240,13 @@ main {
     justify-content: space-between;
 }
 
+.center img {
+  max-width: 100%; /* fill up the div by width, as tall as it needs to be. */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project-banner {
     /* padding: 10px; */
     /* width: 100%; */
