@@ -7,6 +7,7 @@ This is the source code for the website of Gus Becker deployed at:
 ### 2025-06-18
 - Replace VHS bot with smaller image
 - Add Borneo III: Sarawak post
+- Add photos to HCMC post
 ### 2025-06-17
 - Add VHS bot to sidebar of newer pages
 - Prepare Hoi An/Da Nang blog for posting
