@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-06-18
+- Replace VHS bot with smaller image
 ### 2025-06-17
 - Add VHS bot to sidebar of newer pages
 - Prepare Hoi An/Da Nang blog for posting
