@@ -4,6 +4,9 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-06-28
+- Add Java blog post
+
 ### 2025-06-18
 - Replace VHS bot with smaller image
 - Add Borneo III: Sarawak post
