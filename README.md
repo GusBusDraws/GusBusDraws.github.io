@@ -4,6 +4,10 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-08-27
+- Add Blog, CC, and new DoodleBot banner to Home
+- Add VHS bot to home page
+- Add Smallway button to Smallway, Links, and Home pages
 ### 2025-06-18
 - Replace VHS bot with smaller image
 - Add Borneo III: Sarawak post
