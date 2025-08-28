@@ -222,12 +222,16 @@ main {
     margin: 5px;
     width: 50%;
     opacity: 0;
-} 
+}
 
 .button-wall {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.button-88x31 {
+    margin: 2px;
 }
 
 .button-88x31:hover {
