@@ -208,32 +208,38 @@ main {
   margin: 10px;
 }
 
-.tile-project-content {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  padding-top: 20px;
+.tile-project h2 {
+  text-align: left;
 }
 
-.tile-project-img-container {
-  max-width: 25%;
-  align-content: center;
+.tile-project-content {
+  max-width: 100%;
+  /* display: flex; */
+  padding-top: 20px;
+  flex-wrap: nowrap;
+}
+
+.tile-project-img-container a {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tile-project-img-container img {
   border: 1px solid var(--console-highlights);
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
 }
 
 .tile-project-p-container {
-  max-width: 75%;
-  align-content: center;
+  max-width: 100%;
 }
 
 .tile-project-p-container p {
   max-width: 100%;
-  padding-left: 20px;
+  align-content: center;
+  justify-content: center;
 }
 
 .button-link {
@@ -405,14 +411,30 @@ strong {
     padding:1rem;
 }
 
-/* tablet breakpoint */
+/* Tablet breakpoint */
+/* This sets the parameters for wide screens */
 @media (min-width:768px) {
     .container > .right-sidebar {
         width:calc(100% / 4);
     }
     .container > .main-content {
-        /* width:calc(100%); */
         width:calc(100% * 3/4);
+    }
+    .tile-project-content {
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tile-project-content > .tile-project-img-container {
+        max-width:25%;
+    }
+    .tile-project-img-container img {
+        max-width:100%;
+    }
+    .tile-project-content > .tile-project-p-container {
+        max-width:75%;
+        padding-left: 20px;
     }
     #navbar ul {
         flex-wrap: wrap;
