@@ -171,7 +171,7 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     /* padding: 10px; */
-    margin: 10px; 
+    margin: 10px;
     text-align: justify;
 }
 
@@ -199,6 +199,43 @@ main {
     display: flex;
 }
 
+.tile-project {
+  max-width: 100%;
+  border: 1px solid var(--console-highlights);
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  margin: 10px;
+}
+
+.tile-project-content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+.tile-project-img-container {
+  max-width: 25%;
+  align-content: center;
+}
+
+.tile-project-img-container img {
+  border: 1px solid var(--console-highlights);
+  max-width: 100%;
+  height: auto;
+}
+
+.tile-project-p-container {
+  max-width: 75%;
+  align-content: center;
+}
+
+.tile-project-p-container p {
+  max-width: 100%;
+  padding-left: 20px;
+}
+
 .button-link {
     /* display: block; */
     font-family: 'Fira mono', monospace;
@@ -212,7 +249,7 @@ main {
 }
 
 .button-link:hover {
-    outline: 2px solid var(--console-highlights); 
+    outline: 2px solid var(--console-highlights);
     color: var(--console-highlights);
 }
 
