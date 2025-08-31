@@ -3,12 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smallweb Subway</title>
   <script src="/p5.min.js"></script>
-  <script src="https://gusbus.space/smallweb-subway.js/scifi.js"></script>
+  <script src="https://gusbus.space/smallweb-subway.js/scifi.js"> </script>
   <script src="https://gusbus.space/smallweb-subway.js/zines.js"></script>
   <script src="https://gusbus.space/smallweb-subway.js/doodlecrew.js"></script>
   <script src="https://gusbus.space/smallweb-subway.js/creativesclub.js"></script>
   <script src="https://gusbus.space/smallweb-subway.js/comics.js"></script>
   <script src="https://gusbus.space/smallweb-subway.js/poetry.js"></script>
+  <script src="https://gusbus.space/smallweb-subway.js/central.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -36,7 +37,7 @@
           station is a different webpage in that theme.
         </p>
         <p>
-          On mobile, tab a station to see its info, then tap the info box to
+          On mobile, tap a station to see its info, then tap the info box to
           visit the site in a new tab. With a mouse, hover over
           a station to see the info and click to visit!
         </p>
@@ -48,24 +49,75 @@
         </div>
       </div>
 
+      <div style="margin: 50px;">
+        <smallweb-subway-central></smallweb-subway-central>
+      </div>
+
       <div class="tile">
         <p>
-          Each of the "subway lines" above are actually webrings!
-          That means that each "station" is actually a webpage with at least
-          one navigation widget like seen below. Each line has sites that match
-          a different theme, currently:
-          <a href="/smallweb-subway/scifi/">scifi</a>,
-          <a href="/smallweb-subway/zines/">zines</a>,
-          <a href="/smallweb-subway/doodle-crew/">members of the Doodle Crew Discord server</a>,
-          <a href="/smallweb-subway/creatives-club/">members of Creatives Club</a>,
-          <a href="/smallweb-subway/comics/">comics</a>, and
-          <a href="/smallweb-subway/poetry/">poetry</a>.
+          The themes for each of the lines are as follows:
         </p>
+        <table style="width:100%; border:none; text-align: left;">
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/scifi/" style="color: #A1A3A1">Silver Line</a>
+              <!-- <a href="/smallweb-subway/scifi/">Silver Line (Scifi)</a> -->
+            </th>
+            <th>
+              Scifi art and/or themes
+            </th>
+          </tr>
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/zines/" style="color: #0077c0">Blue Line</a>
+            </th>
+            <th>
+              Original zines and/or zine resources
+            </th>
+          </tr>
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/doodle-crew/" style="color: #25b233">Green Line</a>
+            </th>
+            <th>
+              Members of the
+              <a href="https://discord.gg/2gJYZhmHAz" target="_blank">
+                Doodle Crew Discord server</a>
+            </th>
+          </tr>
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/creatives-club/" style="color: #fad447">Yellow Line</a>
+            </th>
+            <th>
+              Members of
+              <a href="https://creativesclub.art" target="_blank">
+                Creatives Club</a>
+            </th>
+          </tr>
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/comics/" style="color: #f7941d">Orange Line</a>
+            </th>
+            <th>
+              Original comics and cartoons
+            </th>
+          </tr>
+          <tr>
+            <th class="column-left">
+              <a href="/smallweb-subway/poetry/" style="color: #e51937">Red Line</a>
+            </th>
+            <th>
+              Original poetry
+            </th>
+          </tr>
+        </table>
         <p>
           To "ride" the subway,
-          click an arrow in one of the widgets below, find the widget on the
+          click an arrow in the widget above, find the widget on the
           next webpage, and continue clicking through to new pages!
-          Eventually you'll end up back here.
+          Eventually you'll end up back here. You can also click on the title
+          of the line above to see a list of each site included.
         </p>
         <p>
           Any questions or suggestions?
@@ -81,31 +133,6 @@
         </div>
         <p></p>
       </div>
-
-      <div class="app">
-        <smallweb-subway-scifi></smallweb-subway-scifi>
-      </div>
-
-      <div class="app">
-        <smallweb-subway-zines></smallweb-subway-zines>
-      </div>
-
-      <div class="app">
-        <smallweb-subway-doodlecrew></smallweb-subway-doodlecrew>
-      </div>
-
-      <div class="app">
-        <smallweb-subway-creativesclub></smallweb-subway-creativesclub>
-      </div>
-
-      <div class="app">
-        <smallweb-subway-comics></smallweb-subway-comics>
-      </div>
-
-      <div class="app">
-        <smallweb-subway-poetry></smallweb-subway-poetry>
-      </div>
-
 
       <div class="tile">
         <h2>What is this?</h2>
@@ -152,11 +179,6 @@
           an email (<a href="mailto:smallwebsubway@gmail.com" target="_blank">smallwebsubway@gmail.com</a></li>),
           a DM on social media site (see sidebar), or a pull request!
         </p>
-        <p>
-          You can also link to the Smallweb Subway on your site using this button!
-          <div class="center">
-            <a href="https://gusbus.space/smallweb-subway/" target="_blank"><img src="/images/88x31-smallway.png" alt="" width="88" height="31"></a> </p>
-          </div>
       </div>
 
       <div class="tile">
