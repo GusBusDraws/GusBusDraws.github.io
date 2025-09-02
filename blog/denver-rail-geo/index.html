@@ -44,36 +44,221 @@
       <!---------------------------- Blog Post -------------------------------->
       <div class="tile">
         <!--------------------------------------------------------------------->
-        <h2>Subtitle</h2>
+        <h2>Inspiration</h2>
         <!--------------------------------------------------------------------->
         <p>
-          
+          I have seen some cool visualizations where people compare the
+          simplified maps used to navigate a transit system with the
+          real geography of the lines. I have seen this done for big subway
+          systems like the
+          <a href="https://www.reddit.com/r/washingtondc/comments/cn3cia/washington_dc_metro_map_vs_geographic_scale/">
+            DC Metro</a> and the
+          <a href="https://www.reddit.com/r/dataisbeautiful/comments/b8ihhr/comparison_between_the_london_tube_map_and_its/">
+            London Tube</a>, but I wasn't able to find one for Denver's
+            small light rail system. The system itself is definitely not
+            anything special, but Denver being my home, I really wanted to see
+            this! So I decided I'd make it myself.
         </p>
+      </div>
+
+      <div class="tile">
+        <!--------------------------------------------------------------------->
+        <h2>Getting the points from the image</h2>
+        <!--------------------------------------------------------------------->
         <p>
-          
+          To make this work, I'll need location data for the rail lines on the
+          map as well as the real geographic locations. RTD, the public
+          transportation operator for the Denver Metro, provides the geospatial
+          data for the real geography on the lines on their website, but not
+          any kind of location data for the transit map, which makes sense
+          because there's no reason a regular person ever need that. They do
+          provide a rail system map on their website, but it's a raster image
+          which means I can't easily pull the location line data from it.
         </p>
 
         <figure>
           <img
-            src="https://lh3.googleusercontent.com/d/
-                 "
+            src="https://lh3.googleusercontent.com/d/158ebdgXsdAWJmU1nq0ODUmwLxCTbjlF8"
+            alt="Rail map of Denver, Colorado">
+          </img>
+          <figcaption>
+            The Denver Rail Map. Source:
+            <a href="https://www.rtd-denver.com/system-map">RTD</a>
+          </figcaption>
+        </figure>
+
+        <p>
+          I see two options to move forward. The first option would be to trace
+          the lines on the map in a vector graphics editor like
+          <a href="https://inkscape.org">InkScape</a> and extracting the
+          position of the points from the vector obects I would create in the
+          process. This would probably be the more sane thing to do. However,
+          the second option involves image processing, and to me that seemed
+          like a more interesting challenge. If I can get an image processing
+          routine working to extract the coordinates of each line, then it may
+          also have the added benefit of allowing me to apply it to other rail
+          maps.
+        </p>
+        <p>
+          Moving forward with the image processing challenge, the first thing
+          I wanted to try was trying to identify the lines based on color.
+          Even in HSV (hue, saturation, value) space, this proved too difficult
+          since many of the lines have similar colors to one another. I decided
+          I would simplify the task by manually placing points on the map to
+          sample the color of each line.
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/12_rrkyiM_lF-Jt7ZYOhHWemcAEG5reG1"
+            alt="A palette of 10 colors representing the ten rail lines">
+          </img>
+          <figcaption>
+            The colors representing the rail line on the system map.
+          </figcaption>
+        </figure>
+
+        <p>
+          Before using these colors to select the lines from the map, I needed
+          to clean the map by removing some of the other features that have the
+          same colors. This included the legend (where I originally chose the
+          colors) and rail line labels besides each line. I removed these
+          features by manually selecting rows and columns of pixels in the map
+          image and setting all those selected pixels to white.
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/101FkBnKOmX8Hz4ChMKnLGpLvsrhmWtHt"
+            alt="Two rows and five columns of images, each showing a binary
+                 mask of one rail line">
+          </img>
+          <figcaption>
+            Masks for each of the ten lines separated into different images.
+          </figcaption>
+        </figure>
+
+        <p>
+          After cleaning up the image, I was able to use the color I chose for
+          each line
+          (represented by a set of red, green, and blue or RGB values),
+          to match these values with the pixels of the system map to
+          find the rest of each line. However, when I first tried this, it
+          became that each line was not consistently a single set of RGB values.
+          In order to select the majority of each line, I needed to allow for a
+          certain amount of tolerance in each RGB value.
+        </p>
+        <p>
+          After finding a good tolerance, I was able to select each line and
+          segment it from the rest of the image.
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1eUT8XRIWk5HuY812p-Ewk_TUn-S5d6H9"
             alt="">
           </img>
           <figcaption>
           </figcaption>
         </figure>
+
+        <p>
+          05-masks-line-color
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1lyXKKnP6oc9ELmdIxgWuKDcDKZOv1k8C"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          06-masks-zoom
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1UyaCL6rByra48_fsPi9XBhT28IO-SONL"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          06x-skeleton-zoom
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1f9djpjm8M-PSM8x2WgYRIR1CMcixKxsK"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          07-edge-distance-zoom
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1f2autUMnIn8uwCCmLa20aU8vbBr7LMF0"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          08-edge-distance-coords
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1hFFtI5hAkL3NRMHDQc-EfH4RoB9XKzS2"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          09-coords-line-color
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/1L96eT_qgzWB5sfBbenlXCTDMPTWw99CX"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
+        <p>
+          10-continuous-lines-fail
+        </p>
+
+        <figure>
+          <img
+            src="https://lh3.googleusercontent.com/d/13TXlOx8Y_vX3UjjfIQkK5uC93x3o2Ken"
+            alt="">
+          </img>
+          <figcaption>
+          </figcaption>
+        </figure>
+
       </div>
 
       <div class="tile">
-        <!--------------------------------------------------------------------->
-        <h2>Wrapping up</h2>
-        <!--------------------------------------------------------------------->
         <p>
-
+          To be continued...
         </p>
-        <p>
-          Thanks for reading!
-		</p>
       </div>
 <!------- --------- --------- --------- --------- --------- --------- --------->
 

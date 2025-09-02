@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2025-09-01
+- Start writing denver-rail-geo blog post
 - Decrease font size to 12px
 - Add denver-rail-geo blog post
 - Add VHS bot and button class to blog template
