@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2025-09-01
+- Add denver-rail-geo blog post
 - Add VHS bot and button class to blog template
 - Fix wrapping for blogs (following new research page)
 ### 2025-08-31
