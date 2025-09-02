@@ -48,6 +48,7 @@ and then link it! Many fonts have separate files for each style
 
 body {
     font-family: 'Fira Mono', monospace;
+    font-size: 12px;
     margin: 0;
     /* background-color: #08031A; */
     background-color: var(--bg-color);
@@ -177,7 +178,9 @@ main {
 }
 
 .tile img {
-  max-width: 100%; /* fill up the div by width, as tall as it needs to be. */
+  border: 1px solid var(--console-highlights);
+  display: block;
+  max-width: 75%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
