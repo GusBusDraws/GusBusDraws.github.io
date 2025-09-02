@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2025-09-01
+- Fix wrapping for blogs (following new research page)
 ### 2025-08-31
 - Add Doodle Crew banner
 - Add new Central Station widget to the Smallway

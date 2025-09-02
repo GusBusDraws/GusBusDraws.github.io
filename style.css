@@ -173,6 +173,7 @@ main {
     /* padding: 10px; */
     margin: 10px;
     text-align: justify;
+    flex-wrap: wrap;
 }
 
 .tile img {
