@@ -4,6 +4,10 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-02-09
+- Add Hoi An blog post preview
+- Add Ho Chi Min City blog post preview
+- Replace list of blog post links to paginated preview tiles
 ### 2025-08-31
 - Add Doodle Crew banner
 - Add new Central Station widget to the Smallway
