@@ -37,6 +37,92 @@
           <a href="https://apps.apple.com/us/app/netnewswire-rss-reader/id1480640210">NetNewsWire</a>
           for iOS. Both free with just enough features!
         </p>
+      </div>
+
+      <!-- Div where blog previews will be placed according to their page -->
+      <div id="blog-previews"></div>
+
+      <!-- Navigation Controls -->
+      <div id="controls">
+        <button id="prevBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <script>
+        // Blog index data
+        const data = getBlogPreviewData();
+        const itemsPerPage = 10;
+        let currentPage = 1;
+
+        // Event Listeners
+        document.getElementById('prevBtn').addEventListener('click', () => {
+          if (currentPage > 1) { currentPage--; render(); }
+        });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+          if (currentPage * itemsPerPage < data.length) { currentPage++; render(); }
+        });
+
+        // Initial load
+        render();
+
+        function render() {
+          const content = document.getElementById('blog-previews');
+          const pageInfo = document.getElementById('pageInfo');
+          
+          // Slice data for current page
+          const start = (currentPage - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+          const paginatedItems = data.slice(start, end);
+
+          // Update DOM
+          content.innerHTML = paginatedItems.map(item => `${item}`).join('');
+          pageInfo.innerText = `Page ${currentPage} of ${Math.ceil(data.length / itemsPerPage)}`;
+          
+          // Disable buttons at boundaries
+          document.getElementById('prevBtn').disabled = currentPage === 1;
+          document.getElementById('nextBtn').disabled = end >= data.length;
+        }
+
+        function getBlogPreviewData() {
+          return [
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="https://gusbus.space/blog/ho-chi-minh-city" target="_blank">
+                  Ho Chi Minh City
+                </a>
+              </h2>
+              <em>
+                Published Wed, 18 Jun 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="https://gusbus.space/blog/ho-chi-minh-city" target="_blank">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/13Eu-3ncS7BPCI-lPDZuQUkoW68wVEbOx"
+                      alt="A photo of a building with rows of balconies on the front. Nearly
+                          every balcony has a huge sign above it with the name of a cafe">
+                    </img>
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    Kaila and I fly to Ho Chi Minh City, the largest city in the southern half
+                    of Vietnam. More good food, some museums, and lots of walking! This is our
+                    last stop in Vietnam, so it's a bit of a bittersweet time as we try to enjoy
+                    our last few days in this lovely country while also looking forward to what's
+                    ahead.
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `,
+          ]
+        }
+      </script>
+
 		<ul>
 		  <li>2025-06-18 - Vietnam VII: <a href="/blog/ho-chi-minh-city">
 		    Hoi An and Da Nang</a></li>
@@ -55,7 +141,6 @@
           <li>2025-03-25: <a href="/blog/our-journey-begins">
             Our Journey Begins</a></li>
         </ul>
-      </div>
 
       <div>
         <div id="c_widget"></div>
