@@ -23,10 +23,8 @@
       </div>
       <div class="tile">
         <p>
-          Here is where I'll share updates, thoughts, photos, and drawings.
-          For the past few weeks (since March 2025),
-          I have been traveling through Southeast Asia with my wife.
-          The majority of my posts so far are about our trip!
+          Here is where I'll share project updates, thoughts, photos, and
+          drawings. Maybe the occasional life update, too!
         </p>
         <p>
           To get notified when I add new posts, you can add
@@ -44,15 +42,22 @@
 
       <!-- Navigation Controls -->
       <div id="controls">
-        <button id="prevBtn">Previous</button>
+        <!-- <button id="prevBtn">Previous</button>
         <span id="pageInfo"></span>
-        <button id="nextBtn">Next</button>
+        <button id="nextBtn">Next</button> -->
+      </div>
+      <!-- <<< -------------- Previous / Next ---------------- >>> -->
+      <div class="tile-flexer">
+        <div class="tile-no-border">
+          <button id="prevBtn" class=button-link> <<< </a>
+          <button id="nextBtn" class=button-link> >>> </a>
+        </div>
       </div>
 
       <script>
         // Blog index data
         const data = getBlogPreviewData();
-        const itemsPerPage = 10;
+        const itemsPerPage = 3;
         let currentPage = 1;
 
         // Event Listeners
@@ -67,7 +72,7 @@
         render();
 
         function render() {
-          const content = document.getElementById('blog-previews');
+          const blogPreviews = document.getElementById('blog-previews');
           const pageInfo = document.getElementById('pageInfo');
           
           // Slice data for current page
@@ -75,13 +80,22 @@
           const end = start + itemsPerPage;
           const paginatedItems = data.slice(start, end);
 
-          // Update DOM
-          content.innerHTML = paginatedItems.map(item => `${item}`).join('');
-          pageInfo.innerText = `Page ${currentPage} of ${Math.ceil(data.length / itemsPerPage)}`;
+          // Add paginated blog preview to blogPreviews div
+          blogPreviews.innerHTML = paginatedItems.map(item => `${item}`).join('');
+          // pageInfo.innerText = `Page ${currentPage} of ${Math.ceil(data.length / itemsPerPage)}`;
           
           // Disable buttons at boundaries
-          document.getElementById('prevBtn').disabled = currentPage === 1;
-          document.getElementById('nextBtn').disabled = end >= data.length;
+          const isFirstPage = currentPage === 1;
+          const isLastPage = end >= data.length;
+
+          // Toggle 'active-btn' if clickable, 'inactive-btn' if not
+          const prevBtn = document.getElementById('prevBtn');
+          prevBtn.classList.toggle('button-link-ghost', isFirstPage);
+          prevBtn.classList.toggle('button-link', !isFirstPage);
+
+          const nextBtn = document.getElementById('nextBtn');
+          nextBtn.classList.toggle('button-link-ghost', isLastPage);
+          nextBtn.classList.toggle('button-link', !isLastPage);
         }
 
         function getBlogPreviewData() {
@@ -108,7 +122,7 @@
                 </div>
                 <div class="tile-project-p-container">
                   <p>
-                    Kaila and I fly to Ho Chi Minh City, the largest city in the southern half
+                    My wife and I fly to Ho Chi Minh City, the largest city in the southern half
                     of Vietnam. More good food, some museums, and lots of walking! This is our
                     last stop in Vietnam, so it's a bit of a bittersweet time as we try to enjoy
                     our last few days in this lovely country while also looking forward to what's
@@ -118,6 +132,15 @@
               </div>
               </br>
             </div>
+            `,
+            `
+            <div class="tile-project"><p>Test</p></div>
+            `,
+            `
+            <div class="tile-project"><p>Test</p></div>
+            `,
+            `
+            <div class="tile-project"><p>Test</p></div>
             `,
           ]
         }
