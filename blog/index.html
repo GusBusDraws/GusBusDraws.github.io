@@ -40,12 +40,6 @@
       <!-- Div where blog previews will be placed according to their page -->
       <div id="blog-previews"></div>
 
-      <!-- Navigation Controls -->
-      <div id="controls">
-        <!-- <button id="prevBtn">Previous</button>
-        <span id="pageInfo"></span>
-        <button id="nextBtn">Next</button> -->
-      </div>
       <!-- <<< -------------- Previous / Next ---------------- >>> -->
       <div class="tile-flexer">
         <div class="tile-no-border">
@@ -100,6 +94,31 @@
 
         function getBlogPreviewData() {
           return [
+            // `
+            // <div class="tile-project">
+            //   <h2>
+            //     <a href="/blog/">
+            //     </a>
+            //   </h2>
+            //   <em>
+            //     Published
+            //   </em>
+            //   <div class="tile-project-content">
+            //     <div class="tile-project-img-container">
+            //       <a href="/blog/">
+            //         <img>
+            //         </img>
+            //       </a>
+            //     </div>
+            //     <div class="tile-project-p-container">
+            //       <p>
+            //       </p>
+            //     </div>
+            //   </div>
+            //   </br>
+            // </div>
+            // `,
+
             `
             <div class="tile-project">
               <h2>
@@ -331,28 +350,43 @@
               </br>
             </div>
             `,
+
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="/blog/our-journey-begins">
+                  Our Journey Begins!
+                </a>
+              </h2>
+              <em>
+                Published Mon, 24 Mar 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="/blog/our-journey-begins">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/16cEzf9ZdJac0zCRJZ4vrS78puoYwbLLY"
+                      alt="Map showing an expected travel route starting in Hanoi, Vietnam, traversing
+                        into Southern Vietnam, Cambodia, Thailand, Laos, back to Thailand, Singapore,
+                        Borneo, and finally Indonesia">
+                    </img> 
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    The start of this blog and Gus and Kaila's journey through Southeast Asia! I share our rough plans
+                    for a route, as well as some technical details about my setup for writing this blog,
+                    how I updated my website on GitHub from an iPad, and some
+                    suggestions for RSS readers.
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `
           ]
         }
       </script>
-
-		<ul>
-		  <li>2025-06-18 - Vietnam VII: <a href="/blog/ho-chi-minh-city">
-		    Hoi An and Da Nang</a></li>
-		  <li>2025-06-17 - Vietnam VI:&nbsp; <a href="/blog/hoi-an-and-da-nang">
-		    Hoi An and Da Nang</a></li>
-		  <li>2025-05-10 - Vietnam V:&nbsp;&nbsp; <a href="/blog/things-left-to-time-hue">
-		    Things Left to Time in Hue</a></li>
-		  <li>2025-04-27 - Vietnam IV:&nbsp; <a href="/blog/swimming-underground-phong-nha">
-		    Swimming Underground in Phong Nha (& Ninh Binh)</a></li>
-		  <li>2025-04-17 - Vietnam III: <a href="/blog/floating-mountains-ha-long">
-		    Floating Mountains in Ha Long Bay</a></li>
-		  <li>2025-04-13 - Vietnam II:&nbsp; <a href="/blog/happy-water-sapa">
-		    Happy Water in Sapa</a></li>
-          <li>2025-04-07 - Vietnam I:&nbsp;&nbsp; <a href="/blog/dodging-motorbikes-hanoi">
-            Dodging Motorbikes in Hanoi</a></li>
-          <li>2025-03-25: <a href="/blog/our-journey-begins">
-            Our Journey Begins</a></li>
-        </ul>
 
       <div>
         <div id="c_widget"></div>
