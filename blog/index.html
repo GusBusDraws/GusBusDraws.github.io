@@ -23,10 +23,8 @@
       </div>
       <div class="tile">
         <p>
-          Here is where I'll share updates, thoughts, photos, and drawings.
-          For the past few weeks (since March 2025),
-          I have been traveling through Southeast Asia with my wife.
-          The majority of my posts so far are about our trip!
+          Here is where I'll share project updates, thoughts, photos, and
+          drawings. Maybe the occasional life update, too!
         </p>
         <p>
           To get notified when I add new posts, you can add
@@ -37,6 +35,206 @@
           <a href="https://apps.apple.com/us/app/netnewswire-rss-reader/id1480640210">NetNewsWire</a>
           for iOS. Both free with just enough features!
         </p>
+      </div>
+
+      <!-- Div where blog previews will be placed according to their page -->
+      <div id="blog-previews"></div>
+
+      <!-- Navigation Controls -->
+      <div id="controls">
+        <!-- <button id="prevBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button> -->
+      </div>
+      <!-- <<< -------------- Previous / Next ---------------- >>> -->
+      <div class="tile-flexer">
+        <div class="tile-no-border">
+          <button id="prevBtn" class=button-link> <<< </a>
+          <button id="nextBtn" class=button-link> >>> </a>
+        </div>
+      </div>
+
+      <script>
+        // Blog index data
+        const data = getBlogPreviewData();
+        const itemsPerPage = 5;
+        let currentPage = 1;
+
+        // Event Listeners
+        document.getElementById('prevBtn').addEventListener('click', () => {
+          if (currentPage > 1) { currentPage--; render(); window.scrollTo(0, 0); }
+        });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+          if (currentPage * itemsPerPage < data.length) { currentPage++; render(); window.scrollTo(0, 0); }
+        });
+
+        // Initial load
+        render();
+
+        function render() {
+          const blogPreviews = document.getElementById('blog-previews');
+          const pageInfo = document.getElementById('pageInfo');
+          
+          // Slice data for current page
+          const start = (currentPage - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+          const paginatedItems = data.slice(start, end);
+
+          // Add paginated blog preview to blogPreviews div
+          blogPreviews.innerHTML = paginatedItems.map(item => `${item}`).join('');
+          // pageInfo.innerText = `Page ${currentPage} of ${Math.ceil(data.length / itemsPerPage)}`;
+          
+          // Disable buttons at boundaries
+          const isFirstPage = currentPage === 1;
+          const isLastPage = end >= data.length;
+
+          // Toggle 'active-btn' if clickable, 'inactive-btn' if not
+          const prevBtn = document.getElementById('prevBtn');
+          prevBtn.classList.toggle('button-link-ghost', isFirstPage);
+          prevBtn.classList.toggle('button-link', !isFirstPage);
+
+          const nextBtn = document.getElementById('nextBtn');
+          nextBtn.classList.toggle('button-link-ghost', isLastPage);
+          nextBtn.classList.toggle('button-link', !isLastPage);
+        }
+
+        function getBlogPreviewData() {
+          return [
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="/blog/ho-chi-minh-city">
+                  Ho Chi Minh City
+                </a>
+              </h2>
+              <em>
+                Published Wed, 18 Jun 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="/blog/ho-chi-minh-city">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/10hPBXUBmlU-dCgmd9ui469L9BP1_U7UR"
+                      alt="Photo of an extremely busy and lit up street. There are people packed
+                          everywhere and colored lights shine on every surface.">
+                    </img>
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    My wife and I fly to Ho Chi Minh City, the largest city in the southern half
+                    of Vietnam. More good food, some museums, and lots of walking! This is our
+                    last stop in Vietnam, so it's a bit of a bittersweet time as we try to enjoy
+                    our last few days in this lovely country while also looking forward to what's
+                    ahead.
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `,
+
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="/blog/hoi-an-and-da-nang">
+                  Hoi An and Da Nang
+                </a>
+              </h2>
+              <em>
+                Published Tue, 17 Jun 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="/blog/hoi-an-and-da-nang">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/129uG3mMp5LuvFYqnsBPpCEiRHql2Ie4p"
+                      alt="Photo of a street food cart with stakes of food on the top: 
+                          sausages, shrimp, tentacles, a quail, and some frogs. Below these
+                          are skewers with cubes of meat and veggies.">
+                    </img>
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    Two more cities in Vietnam: Hoi An and Da Nang. We check out the historic old
+                    town with all the pretty buildings and paper lanterns in Hoi An, and also
+                    spend some time on the beach there and in Da Nang. Some more good food too!
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `,
+
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="/blog/things-left-to-time-hue">
+                  Things Left to Time in Hue
+                </a>
+              </h2>
+              <em>
+                Published Sun, 10 May 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="/blog/things-left-to-time-hue">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/1rs0dNlzq4UnDhswamCZSJhGAKFgkj3Xw"
+                      alt="A stone path between some buildings and tress besides some water">
+                    </img>
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    We move farther south in Vietnam and come to the biggest city we've been in since Hanoi.
+                    We eat some good food and see some different kinds of relics to time.
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `,
+
+            `
+            <div class="tile-project">
+              <h2>
+                <a href="/blog/swimming-underground-phong-nha">
+                  Swimming Underground in Phong Nha
+                </a>
+              </h2>
+              <em>
+                Published Sun, 27 Apr 2025
+              </em>
+              <div class="tile-project-content">
+                <div class="tile-project-img-container">
+                  <a href="/blog/swimming-underground-phong-nha">
+                    <img
+                      src="https://lh3.googleusercontent.com/d/1I4Nfpe9fO_d1EozhYiWJGh91X2BHMB8f"
+                      alt="A photo os a dirt road that stretches into the distance before hanging right,
+                          surround on the sides by farmland. A water buffalo can be seen grazing.
+                          In the near background, some lush mountains rise quickly out of the ground,
+                          a layer behind occluded by some clouds.">
+                    </img>
+                  </a>
+                </div>
+                <div class="tile-project-p-container">
+                  <p>
+                    We leave the coast and head a bit south to a region sometimes described
+                    as "the Ha Long Bay of the Land" that features similar geology that isn't flooded.
+                    We get to see some more caves, and these are way more extensive then what we floated
+                    through in the bays.
+                  </p>
+                </div>
+              </div>
+              </br>
+            </div>
+            `,
+          ]
+        }
+      </script>
+
 		<ul>
 		  <li>2025-06-18 - Vietnam VII: <a href="/blog/ho-chi-minh-city">
 		    Hoi An and Da Nang</a></li>
@@ -55,7 +253,6 @@
           <li>2025-03-25: <a href="/blog/our-journey-begins">
             Our Journey Begins</a></li>
         </ul>
-      </div>
 
       <div>
         <div id="c_widget"></div>
