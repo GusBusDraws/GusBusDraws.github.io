@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-02-18
+- Add post-sea-travels post
 - Reduce padding on comment widget for consistency with other elements
 ### 2026-02-09
 - Add first blog post preview
