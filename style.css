@@ -1,40 +1,4 @@
-/* user styles
-
-/* styles are what change the color and sizes of stuff on your site. */
-
-/* these are variables that are being used in the code
-these tended to confuse some people, so I only kept
-the images as variables */
-
-
-:root {
-    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-    --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
-
-    /* colors */
-    --bg-color: #03151a;
-    --console-highlights: #12f028;
-    --console-text: #25b233;
-    --console-trans: #105817;
-    --console-hover: #ffffff;
-    --console-bg: #0a291c;
-    --grey-bg: #6A7C8F;
-    --prev-content: #43256E;
-    --prev-header-color: #5e4e8c;
-    --prev-border-color: #ED64F5;
-}
-
-/* if you have the URL of a font, you can set it below */
-/* feel free to delete this if it's not your vibe */
-
-/* this seems like a lot for just one font and I would have to agree
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many!
-
-*/
-
+/* Fonts */
 @font-face {
     font-family: 'Fira Mono', monospace;
     src: url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
@@ -46,61 +10,56 @@ and then link it! Many fonts have separate files for each style
     font-weight: bold;
 }
 
-body {
-    font-family: 'Fira Mono', monospace;
-    margin: 0;
-    /* background-color: #08031A; */
-    background-color: var(--bg-color);
-    /* you can delete the line below if you'd prefer to not use an image */
-    /* background-size: 65px; */
-    /* color: #fceaff; */
-    color: var(--console-text);
-    /* background-image: var(--body-bg-image); */
+:root {
+    /* colors */
+    --bg-color: #03151a;
+    --console-highlights: #12f028;
+    --console-text: #25b233;
+    --console-trans: #105817;
+    --console-hover: #ffffff;
+    --console-bg: #0a291c;
+    --grey-bg: #6A7C8F;
 }
 
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
+h1, h2, h3 {
+    color: var(--console-highlights);
+}
+
+h1 {
+    text-align: center;
+}
+
+body{
+    font-family: 'Fira Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--console-text);
+}
+
+/* flexbox container */
 .container {
-    max-width: 1200px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-    and change the media query according to the comment! */
-    margin: 0 auto;
-    /* this centers the entire page */
     display:flex;
     flex-wrap:wrap;
 }
 
-/* the area below is for all links on your page
-EXCEPT for the navigation */
+/* columns (mobile) */
+.container > * {
+    width:100%;
+}
+
 .container a {
-    /* color: #ED64F5; */
     color: var(--console-highlights);
     font-weight: bold;
     text-decoration: underline;
 }
+
 a:hover {
     /* color: #a49cba; */
     color: var(--console-hover);
     text-decoration: underline;
 }
 
-#header {
-    width: 100%;
-    /* background-color: #5e4e8c; */
-    background-color: var(--console-bg);
-    /* header color here! */
-    height: 150px;
-    /* this is only for a background image! */
-    /* if you want to put images IN the header,
-    you can add them directly to the <div id="header"></div> element! */
-    /* background-image: var(--header-image); */
-    background-size: 100%;
-}
-
-/* navigation section!! */
 #navbar {
     height: 40px;
     background-color: var(--bg-color);
@@ -120,48 +79,18 @@ a:hover {
     padding-top: 10px;
 }
 
-/* navigation links*/
 #navbar li a {
-    /* color: #ED64F5; */
-    color: var(--console-highlights);
-    /* navbar text color */
-    font-weight: 800;
     text-decoration: none;
-    /* this removes the underline */
 }
 
-/* navigation link when a link is hovered over */
-#navbar li a:hover {
-    /* color: #a49cba; */
-    color: var(--console-hover);
-    text-decoration: underline;
-}
-
-.right-sidebar {
-    /* background-color: #241445; */
-    background-color: var(--bg-color);
-    width: 200px;
-    /* padding: 20px; */
-    font-size: smaller;
-    /* this makes the sidebar text slightly smaller */
-}
-
-/* this is the color of the main content area,
-between the sidebars! */
-main {
-    /* background-color: #43256E; */
+.main-content {
     background-color: var(--console-bg);
-    flex: 1;
-    padding: 20px;
-    /* order: 2; */
 }
 
 .main-title {
-    /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
-    /* padding: 20px; */
-    /* padding: 10px; */
     padding-left: 20px;
+    padding-right: 20px;
     margin: 10px;
 }
 
@@ -194,6 +123,15 @@ main {
     /* padding-right: 0px; */
     margin: 5px;
 }
+
+.project-banner {
+    margin: 10px;
+}
+
+.project-banner img {
+    width: 100%;
+}
+
 
 .tile-flexer > div {
     display: flex;
@@ -294,19 +232,6 @@ main {
   margin-right: auto;
 }
 
-.project-banner {
-    /* padding: 10px; */
-    /* width: 100%; */
-    /* max-width: 100%; */
-    margin: 10px;
-}
-
-.project-banner img {
-    /* max-width: 100%; */
-    width: 100%;
-    /* padding: 10px; */
-}
-
 .link-tile {
     border: 1px solid var(--console-highlights);
     padding-left: 20px;
@@ -366,60 +291,19 @@ main {
     align-items: center;
 }
 
+.right-sidebar,
+.left-sidebar {
+    font-size: smaller;
+}
+
 footer {
-    /* background-color: #13092D; */
     background-color: var(--bg-color);
-    /* background color for footer */
-    width: 100%;
     padding: 10px;
     text-align: center;
-    /* this centers the footer text */
 }
 
-h1,
-h2,
-h3 {
-    /* color: #ED64F5; */
-    color: var(--console-highlights);
-}
-
-h1 {
-    /*font-size: 25px;*/
-    font-size: bigger;
-}
-
-h2 {
-    font-size: big;
-}
-
-strong {
-    /* this styles bold text */
-    color: #ED64F5;
-}
-
-#topBar {
-    width: 100%;
-    height: 30px;
-    padding: 10px;
-    font-size: smaller;
-    background-color: #13092D;
-}
-
-/* columns (mobile) */
-.container > * {
-    width:100%;
-    padding:1rem;
-}
-
-/* Tablet breakpoint */
-/* This sets the parameters for wide screens */
+/* tablet breakpoint */
 @media (min-width:768px) {
-    .container > .right-sidebar {
-        width:calc(100% / 4);
-    }
-    .container > .main-content {
-        width:calc(100% * 3/4);
-    }
     .tile-project-content {
         flex-wrap: nowrap;
         display: flex;
@@ -436,189 +320,26 @@ strong {
         max-width:75%;
         padding-left: 20px;
     }
-    #navbar ul {
-        flex-wrap: wrap;
+    .container > .left-sidebar,
+    .container > .right-sidebar {
+        width:50%;
     }
 }
 
-  /*///////////////*/
- /* Smallway Page */
-/*///////////////*/
-
-.column-left {
-  width: 33%;
-  text-align: right;
-  padding-right: 20px;
-}
-
-  /*////////////////*/
- /* DoodleBot Page */
-/*////////////////*/
-
-/* Apply to all children of doodlebot div class */
-.doodlebot > div {
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-}
-
-textarea {
-    background-color: var(--console-trans);
-    color: var(--console-highlights);
-    /* outline: solid var(--console-highlights); */
-    border: 1px solid var(--console-highlights);
-    outline-color: var(--console-highlights);
-    outline: 2px var(--console-highlights);
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-    margin: 5px;
-    resize: vertical;
-}
-
-.doodlebot select {
-    /* display: block; */
-    font-family: 'Fira mono', monospace;
-    border: 1px solid var(--console-highlights);
-    background-color: var(--console-trans);
-    color: var(--console-highlights);
-    padding: 10px;
-    margin: 5px;
-    width: 50%;
-}
-
-.doodlebot select option:hover{
-    background-color: #1BA1E2 !important;
-}
-
-.doodlebot button {
-    /* display: block; */
-    font-family: 'Fira mono', monospace;
-    border: 1px solid var(--console-highlights);
-    background-color: var(--console-trans);
-    color: var(--console-highlights);
-    padding: 10px;
-    margin: 5px;
-    width: 50%;
-}
-
-.doodlebot button:hover {
-    outline: 2px solid var(--console-highlights);
-}
-
-#doodlebot-label {
-    padding: 20px;
-}
-
-  /*////////////////////*/
- /* gallery formatting */
-/*////////////////////*/
-
-div#gal_flex { /* who needs device width breakpoints when you have flex wrap */
-    padding-top: 20px;
-    padding-bottom: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 60em; /* you can set this wider if you like, or remove it to fill the full width of a large screen. I just like to limit it. */
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	justify-content: center; /* align horizontal */
-	align-items: center; /* align vertical */
-}
-
-div.gallery {
-  margin: 5px;
-  /* border: 1px solid #875c12; */
-  width: 300px; /* on the narrowest phone screens, this should still give you two across */
-  /* height: 160px; */
-  position: relative; /* so the alt popup is anchored relative to here */
-}
-
-/* div.gallery:hover {
-  border: 1px solid #a61c3c;
-} */
-
-div.gallery img {
-  max-width: 100%; /* fill up the div by width, as tall as it needs to be. */
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.desc:hover + div.altpopup, div.altpopup:hover {
-	display: block;			/* show only on hover over the caption */
-}					/* or on touchscreens, if you touch the caption. */
-
-div.altpopup { /* this div is added by the script! Don't actually put it in your HTML file. */
-	padding: 2px;
-	position: absolute; /* anchor it to the bottom of the image+caption space */
-	bottom: 0;
-	left: 0;
-	background-color: #a61c3c;
-	color: white;
-	display: none;
-}
-
-
-/* div.desc {
-  padding: 15px;
-  text-align: center;
-} */
-
-/* full screen overlay to show bigger versions on gallery pages */
-div#overlay {
-	display: none; /* hidden by default */
-	position: fixed; /* same place no matter the scroll */
-	z-index: 1; /* stay on top */
-	left: 0; /* position within the viewport */
-	top: 0;
-	width: 100%; /* size relative to the viewport */
-	height: 100%;
-	padding: 5px;
-	overflow: auto; /* scroll if needed */
-	background-color: rgb(0,0,0); /* for browsers who don't know opacity */
-	background-color: rgba(0,0,0,0.75); /* and for those who do */
-}
-
-/* the image itself */
-img#overlay-img {
-	margin: auto;
-	max-width: 95%;
-	max-height: 90%; /* leave space for the caption below the image */
-}
-
-/* the buttons */
-button.overlay-control { 
-/* all the control buttons. Should be visible against both the blanking-out overlay (default black)
- * and the images themselves if they happen to be wide enough to get underneat the buttons */
-	color: #f2f2f2;
-	background-color: rgba(0,0,0,0);
-	font-size: 40px;
-	font-weight: bold;
-	border: none;
-	text-shadow: 0 0 0 #ccc;
-}
-
-button.overlay-control:hover {
-	color: #a61c3c;
-	text-shadow: 0 0 25px #2f2;
-}
-
-button#overlay-close { /* top right */
-	position: absolute;
-	top: 5px;
-	right: 35px;
-}
-
-button#overlay-prev { /* left side of screen */
-	position: absolute;
-	left: 5px;
-	bottom: 50%;
-}
-
-button#overlay-next { /* right side of screen */
-	position: absolute;
-	right: 15px;
-	bottom: 50%;
+/* desktop breakpoint */
+@media (min-width:1024px) {
+    .container > .header {
+        order:-2; /* header first */
+    }
+    .container > .left-sidebar {
+        /* left sidebar second (first in second row) */
+        order:-1; 
+    }
+    .container > .main-content {
+        width:50%;
+    }
+    .container > .left-sidebar,
+    .container > .right-sidebar {
+        width:25%;
+    }
 }

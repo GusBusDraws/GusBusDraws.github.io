@@ -8,24 +8,27 @@
 <body>
 
   <div class="container">
-    <header id="headerArea">
+    <header class="header">
       <nav id="navbar">
           <ul>
-            <li><a href="/doodlebot">DoodleBot</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
             <li><a href="/smallweb-subway/">Smallway</a></li>
+            <!-- <li><a href="/doodlebot">DoodleBot</a></li> -->
             <li><a href="/links">Links</a></li>
+            <li><a href="/links">More</a></li>
           </ul>
       </nav>
     </header>
 
     <main class="main-content">
       <div class="main-title">
-        <h1>Welcome to GusBus Space!</h1>
+        <h1>Welcome to Gus Bus Space!</h1>
       </div>
       <div class="tile">
         <p>
-          My name is Gus Becker and I'm an artist and research scientist
-          living in Denver, Colorado.
+          My name is Gus Becker and I'm an artist and data engineer in
+          Boulder, Colorado.
         </p>
         <p>
           I decided to make this site after coming across a blog post about the
@@ -36,9 +39,49 @@
           share them with others and build some community in the meantime!
         </p>
       </div>
+
+      <div class="main-title">
+        <h2>Check out my latest blog post:</h2>
+      </div>
+
+      <div class="tile-project">
+        <h3>
+          <a href="/blog/post-sea-travels">
+            An update on updates post SEA travels
+          </a>
+        </h3>
+        <em>
+          Published Wed, 18 Feb 2026
+        </em>
+        <div class="tile-project-content">
+          <div class="tile-project-img-container">
+            <a href="/blog/post-sea-travels">
+              <img
+                src="https://lh3.googleusercontent.com/d/1fclDYr1VaJ3CE1aCrLj32gI6ptsOV8yi"
+                alt="
+                  A digital drawing of an alien with a cowboy hat, leather vest
+                  with tassels, blue jeans, cowboy boots with spurs, and a big belt
+                  buckle with '51' on it. The alien appears to be standing on the
+                  surface of a moon or asteroid, with a starry night sky above and
+                  the words 'The Last Rodeo' below.
+                ">
+            </a>
+          </div>
+          <div class="tile-project-p-container">
+            <p>
+              A much needed update to break my streak of no updates! In this post
+              I share my plans for moving forward and sharing the rest of my travel
+              logs and some new stuff, too! Also some fun drawings form the past few
+              months.
+            </p>
+          </div>
+        </div>
+        </br>
+      </div>
+
       <div class="main-title">
         <h2>
-          Check out my projects below:
+          Explore some more of my projects:
         <h2>
       </div>
 
@@ -98,7 +141,7 @@
 
     </main>
 
-    <section class="right-sidebar">
+    <section class="left-sidebar">
       <div class="center">
         <img
           src="/images/vhs-bot.png"
@@ -106,27 +149,75 @@
                They have arms and legs and are holding a VHS tape.">
         </img>
       </div>
-      <h2>Contact</h2>
-      <p>Here are some ways to get in touch with Gus:</p>
-      <ul>
-        <li><a href="mailto:gusbusdraws@gmail.com" target="_blank">gusbusdraws@gmail.com</a></li>
-        <li><a href="https://bsky.app/profile/gusbusdraws.bsky.social" target="_blank">Bluesky</a></li>
-        <li><a href="https://instagram.com/gusbusdraws" target="_blank">Instagram</a></li>
-        <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
-        <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
-      </ul>
-      <h2>Button</h2>
-      <p>You're welcome to link to my site with the following button:</p>
-      <div class="button-wall">
-        <a class="button-88x31" href="https://gusbus.space" target="_blank"><img src="/images/88x31-gusbus.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
-        <a class="button-88x31" href="https://gusbus.space/smallweb-subway/" target="_blank">
-          <img src="/images/88x31-smallway.png" alt="Text 'SMALLWAY' above part of a subway map">
-        </a>
-      <p>If you do link to my site, let me know so I can link back!</p>
-      <p>This site was created by modifying <a href="https://sadgrl.online/projects/layout-builder/"> Sadgrl's Layout Builder</a> template.</p>
+
+      <div class="tile">
+        <h2>Contact</h2>
+        <p>Here are some ways to get in touch with Gus:</p>
+        <ul>
+          <li><a href="mailto:gusbusdraws@gmail.com" target="_blank">gusbusdraws@gmail.com</a></li>
+          <li><a href="https://bsky.app/profile/gusbusdraws.bsky.social" target="_blank">Bluesky</a></li>
+          <li><a href="https://instagram.com/gusbusdraws" target="_blank">Instagram</a></li>
+          <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+          <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+        </ul>
+      </div>
+
+      <div class="tile">
+        <h2>Button</h2>
+        <p>You're welcome to link to my site with the following button:</p>
+        <div class="button-wall">
+          <a class="button-88x31" href="https://gusbus.space" target="_blank"><img src="/images/88x31-gusbus.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+          <a class="button-88x31" href="https://gusbus.space/smallweb-subway/" target="_blank">
+            <img src="/images/88x31-smallway.png" alt="Text 'SMALLWAY' above part of a subway map">
+          </a>
+        </div>
+        <p>If you do link to my site, let me know so I can link back!</p>
+      </div>
+
+      <div class="tile">
+        <p>This site was created by modifying the <a href="https://matthewjamestaylor.com/holy-grail-layout#flexbox">Holy Grail Flexbox</a> layout.</p>
+      </div>
     </section>
 
-    <footer id="footer">
+    <aside class="right-sidebar">
+      <div class="center">
+        <img
+          src="/images/vhs-bot.png"
+          alt="Digital drawing of a robot with an old CRT monitor for a face.
+               They have arms and legs and are holding a VHS tape.">
+        </img>
+      </div>
+
+      <div class="tile">
+        <h2>Contact</h2>
+        <p>Here are some ways to get in touch with Gus:</p>
+        <ul>
+          <li><a href="mailto:gusbusdraws@gmail.com" target="_blank">gusbusdraws@gmail.com</a></li>
+          <li><a href="https://bsky.app/profile/gusbusdraws.bsky.social" target="_blank">Bluesky</a></li>
+          <li><a href="https://instagram.com/gusbusdraws" target="_blank">Instagram</a></li>
+          <li><a href="https://vis.social/@gus" target="_blank">Mastodon</a></li>
+          <li><a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew Discord server</a></li>
+        </ul>
+      </div>
+
+      <div class="tile">
+        <h2>Button</h2>
+        <p>You're welcome to link to my site with the following button:</p>
+        <div class="button-wall">
+          <a class="button-88x31" href="https://gusbus.space" target="_blank"><img src="/images/88x31-gusbus.png" alt="A bus shaped spaceship besides the text GUS BUS SPACE"></a>
+          <a class="button-88x31" href="https://gusbus.space/smallweb-subway/" target="_blank">
+            <img src="/images/88x31-smallway.png" alt="Text 'SMALLWAY' above part of a subway map">
+          </a>
+        </div>
+        <p>If you do link to my site, let me know so I can link back!</p>
+      </div>
+
+      <div class="tile">
+        <p>This site was created by modifying the <a href="https://matthewjamestaylor.com/holy-grail-layout#flexbox">Holy Grail Flexbox</a> layout.</p>
+      </div>
+      </aside>
+
+    <footer class="footer">
       <p>
         This site template is public domain!
         <a href="https://github.com/GusBusDraws/GusBusDraws.github.io" target="_blank">
