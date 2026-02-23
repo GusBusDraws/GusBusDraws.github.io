@@ -4,6 +4,9 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-02-23
+- Combine [Holy Grail Flexbox](https://matthewjamestaylor.com/holy-grail-layout#flexbox)
+  layout with [responsive navbar](https://www.youtube.com/watch?v=8eFeIFKAKHw)
 ### 2026-02-19
 - Add preview for post-sea-travels post
 ### 2026-02-18
