@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-02-25
+- Update left sidebar with new button icons (WIP)
 ### 2026-02-23
 - Add back in formatting for DoodleBot UI and galleries
 - Combine [Holy Grail Flexbox](https://matthewjamestaylor.com/holy-grail-layout#flexbox)

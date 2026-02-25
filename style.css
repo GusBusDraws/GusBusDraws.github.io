@@ -286,6 +286,42 @@ h1 {
   justify-content: center;
 }
 
+.icons {
+  display: flex;
+  margin-bottom: 20px;
+  /* padding: 10px; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-button {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid var(--console-highlights);
+  background-color: var(--console-trans);
+  color: var(--console-highlights);
+  /* padding: 5px; */
+  /* margin: 5px; */
+  aspect-ratio: 1;
+  width: calc(100% / 5 - 5px);
+  height: auto;
+}
+
+.icon-button:hover {
+    outline: 2px solid var(--console-highlights);
+}
+
+.icon-button img {
+  margin: 5px;
+  align-items: center;
+}
+
+.icon-button img {
+  margin: 5px;
+  align-items: center;
+  fill: var(--console-highlights);
+}
+
 .button-link {
     /* display: block; */
     font-family: 'Fira mono', monospace;
