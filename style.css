@@ -224,6 +224,15 @@ h1 {
   opacity: 0.7;
 }
 
+.tile ul {
+  list-style-position: inside;
+}
+
+.tile li {
+  padding-left: 2em;
+  text-indent: -1em;
+}
+
 .tile-no-border {
     padding: 0px;
     /* padding-right: 0px; */
@@ -436,6 +445,11 @@ h1 {
 .right-sidebar,
 .left-sidebar {
     font-size: smaller;
+}
+
+.right-sidebar *,
+.left-sidebar * {
+    text-align: left;
 }
 
 footer {
