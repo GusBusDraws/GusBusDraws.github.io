@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-02-25
+- Add net neighbor buttons to left sidebar and other site buttons to the right sidebar
 - Update right sidebar with recent updates
 - Update left sidebar with new button icons (WIP)
 ### 2026-02-23

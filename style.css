@@ -63,7 +63,7 @@ nav svg{
   display: none;
 }
 
-@media(max-width: 449px){
+@media(max-width: 599px){
   .links-container{
     flex-direction: column;
     align-items: flex-start;
@@ -72,7 +72,8 @@ nav svg{
     top: 0;
     right: -100%;
     z-index: 10;
-    width: 300px;
+    width: 200px;
+    height: 900px;
 
     background-color: var(--console-bg);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
@@ -102,7 +103,7 @@ nav svg{
   }
 }
 
-@media(min-width: 450px){
+@media(min-width: 600px){
   .links-container{
     height: 100%;
     width: 100%;
@@ -317,7 +318,8 @@ h1 {
 }
 
 .icon-button:hover {
-    outline: 2px solid var(--console-highlights);
+  outline: 2px solid var(--console-highlights);
+  background-color: var(--console-highlights);
 }
 
 .icon-button img {
