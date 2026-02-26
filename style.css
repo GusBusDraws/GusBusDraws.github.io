@@ -327,10 +327,14 @@ h1 {
   align-items: center;
 }
 
-.icon-button img {
+.icon-button svg {
   margin: 5px;
   align-items: center;
-  fill: var(--console-highlights);
+  stroke: var(--console-highlights);
+}
+
+.icon-button svg:hover * {
+  stroke: var(--bg-color);
 }
 
 .button-link {
@@ -452,6 +456,17 @@ h1 {
 .right-sidebar *,
 .left-sidebar * {
     text-align: left;
+}
+
+.left-sidebar .logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+
+.left-sidebar .logo svg {
+  width: 50%;
 }
 
 footer {
