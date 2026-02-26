@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-02-25
+- Add 88x31 hit counter
 - Update left sidebar with personal logo
 - Update left sidebar with new social icons
 - Add net neighbor buttons to left sidebar and other site buttons to the right sidebar
