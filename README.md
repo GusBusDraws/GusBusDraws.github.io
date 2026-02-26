@@ -5,7 +5,8 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-02-26
-- Add RSS button to home page
+- Add DoodleDave's button to sidebar
+- Add RSS button to sidebar
 ### 2026-02-25
 - Add 88x31 hit counter
 - Update left sidebar with personal logo
