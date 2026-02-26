@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-02-26
+- Add new sidebars to Smallway page
 - Add blog/list.html
 - Add DoodleDave's button to sidebar
 - Add RSS button to sidebar
