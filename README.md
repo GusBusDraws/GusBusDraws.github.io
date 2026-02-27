@@ -4,7 +4,26 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-02-26
+- Add new sidebars to Smallway, Research, Procedural Art, Scifi,
+  Galactic Transitway, blog posts, and Links pages
+- Add blog/list.html
+- Add DoodleDave's button to sidebar
+- Add RSS button to sidebar
+### 2026-02-25
+- Add 88x31 hit counter
+- Update left sidebar with personal logo
+- Update left sidebar with new social icons
+- Add net neighbor buttons to left sidebar and other site buttons to the right sidebar
+- Update right sidebar with recent updates
+### 2026-02-23
+- Add back in formatting for DoodleBot UI and galleries
+- Combine [Holy Grail Flexbox](https://matthewjamestaylor.com/holy-grail-layout#flexbox)
+  layout with [responsive navbar](https://www.youtube.com/watch?v=8eFeIFKAKHw)
+### 2026-02-19
+- Add preview for post-sea-travels post
 ### 2026-02-18
+- Add post-sea-travels post
 - Reduce padding on comment widget for consistency with other elements
 ### 2026-02-09
 - Add first blog post preview

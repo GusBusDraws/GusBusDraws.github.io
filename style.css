@@ -1,40 +1,4 @@
-/* user styles
-
-/* styles are what change the color and sizes of stuff on your site. */
-
-/* these are variables that are being used in the code
-these tended to confuse some people, so I only kept
-the images as variables */
-
-
-:root {
-    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-    --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
-
-    /* colors */
-    --bg-color: #03151a;
-    --console-highlights: #12f028;
-    --console-text: #25b233;
-    --console-trans: #105817;
-    --console-hover: #ffffff;
-    --console-bg: #0a291c;
-    --grey-bg: #6A7C8F;
-    --prev-content: #43256E;
-    --prev-header-color: #5e4e8c;
-    --prev-border-color: #ED64F5;
-}
-
-/* if you have the URL of a font, you can set it below */
-/* feel free to delete this if it's not your vibe */
-
-/* this seems like a lot for just one font and I would have to agree
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many!
-
-*/
-
+/* Fonts */
 @font-face {
     font-family: 'Fira Mono', monospace;
     src: url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
@@ -46,122 +10,194 @@ and then link it! Many fonts have separate files for each style
     font-weight: bold;
 }
 
-body {
-    font-family: 'Fira Mono', monospace;
-    margin: 0;
-    /* background-color: #08031A; */
-    background-color: var(--bg-color);
-    /* you can delete the line below if you'd prefer to not use an image */
-    /* background-size: 65px; */
-    /* color: #fceaff; */
-    color: var(--console-text);
-    /* background-image: var(--body-bg-image); */
+:root {
+    /* colors */
+    /* --bg-color: #03151a; */
+    --bg-color: #000000;
+    --console-highlights: #12f028;
+    --console-text: #25b233;
+    --console-trans: #105817;
+    --console-hover: #ffffff;
+    --console-bg: #0a291c;
+    --grey-bg: #6A7C8F;
 }
 
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
+*{
+  /* margin: 0; */
+  padding: 0;
+  box-sizing:border-box;
+}
+
+nav{
+  height: 60px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: calc(100% / 5);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--console-highlights);
+}
+
+nav a:hover{
+  background-color: var(--console-highlights);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+nav svg{
+  fill: var(--console-highlights);
+}
+
+#sidebar-active{
+  display: none;
+}
+
+@media(max-width: 599px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+    height: 900px;
+
+    background-color: var(--console-bg);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+@media(min-width: 600px){
+  .links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+      display: none;
+  }
+}
+
+
+body{
+    font-family: 'Fira Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--console-text);
+}
+
+h1, h2, h3 {
+    color: var(--console-highlights);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* flexbox container */
 .container {
-    max-width: 1200px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-    and change the media query according to the comment! */
-    margin: 0 auto;
-    /* this centers the entire page */
     display:flex;
     flex-wrap:wrap;
 }
 
-/* the area below is for all links on your page
-EXCEPT for the navigation */
-.container a {
-    /* color: #ED64F5; */
+/* columns (mobile) */
+.container > * {
+    width:100%;
+}
+
+.container .left-sidebar a,
+.container .main-content a,
+.container .right-sidebar a,
+.container .footer a {
     color: var(--console-highlights);
     font-weight: bold;
     text-decoration: underline;
 }
-a:hover {
+
+.container .left-sidebar a:hover,
+.container .main-content a:hover,
+.container .right-sidebar a:hover,
+.container .footer a:hover {
     /* color: #a49cba; */
     color: var(--console-hover);
     text-decoration: underline;
 }
 
-#header {
-    width: 100%;
-    /* background-color: #5e4e8c; */
+/* tablet breakpoint */
+@media (min-width:768px) {
+  .container > .left-sidebar,
+  .container > .right-sidebar {
+      width:50%;
+  }
+}
+
+
+/* desktop breakpoint */
+@media (min-width:1024px) {
+  .container > .header {
+      order:-2; /* header first */
+  }
+  .container > .left-sidebar {
+      /* left sidebar second (first in second row) */
+      order:-1; 
+  }
+  .container > .main-content {
+      width:50%;
+  }
+  .container > .left-sidebar,
+  .container > .right-sidebar {
+      width:25%;
+  }
+}
+
+.main-content {
     background-color: var(--console-bg);
-    /* header color here! */
-    height: 150px;
-    /* this is only for a background image! */
-    /* if you want to put images IN the header,
-    you can add them directly to the <div id="header"></div> element! */
-    /* background-image: var(--header-image); */
-    background-size: 100%;
-}
-
-/* navigation section!! */
-#navbar {
-    height: 40px;
-    background-color: var(--bg-color);
-    /* navbar color */
-    width: 100%;
-}
-
-#navbar ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    justify-content: space-evenly;
-}
-
-#navbar li {
-    padding-top: 10px;
-}
-
-/* navigation links*/
-#navbar li a {
-    /* color: #ED64F5; */
-    color: var(--console-highlights);
-    /* navbar text color */
-    font-weight: 800;
-    text-decoration: none;
-    /* this removes the underline */
-}
-
-/* navigation link when a link is hovered over */
-#navbar li a:hover {
-    /* color: #a49cba; */
-    color: var(--console-hover);
-    text-decoration: underline;
-}
-
-.right-sidebar {
-    /* background-color: #241445; */
-    background-color: var(--bg-color);
-    width: 200px;
-    /* padding: 20px; */
-    font-size: smaller;
-    /* this makes the sidebar text slightly smaller */
-}
-
-/* this is the color of the main content area,
-between the sidebars! */
-main {
-    /* background-color: #43256E; */
-    background-color: var(--console-bg);
-    flex: 1;
-    padding: 20px;
-    /* order: 2; */
 }
 
 .main-title {
-    /* border: 1px solid #ED64F5; */
     border: 1px solid var(--console-highlights);
-    /* padding: 20px; */
-    /* padding: 10px; */
     padding-left: 20px;
+    padding-right: 20px;
     margin: 10px;
 }
 
@@ -189,11 +225,29 @@ main {
   opacity: 0.7;
 }
 
+.tile ul {
+  list-style-position: inside;
+}
+
+.tile li {
+  padding-left: 2em;
+  text-indent: -1em;
+}
+
 .tile-no-border {
     padding: 0px;
     /* padding-right: 0px; */
     margin: 5px;
 }
+
+.project-banner {
+    margin: 10px;
+}
+
+.project-banner img {
+    width: 100%;
+}
+
 
 .tile-flexer > div {
     display: flex;
@@ -240,6 +294,47 @@ main {
   max-width: 100%;
   align-content: center;
   justify-content: center;
+}
+
+.icons {
+  display: flex;
+  margin-bottom: 20px;
+  /* padding: 10px; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-button {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid var(--console-highlights);
+  background-color: var(--console-trans);
+  color: var(--console-highlights);
+  /* padding: 5px; */
+  /* margin: 5px; */
+  aspect-ratio: 1;
+  width: calc(100% / 5 - 5px);
+  height: auto;
+}
+
+.icon-button:hover {
+  outline: 2px solid var(--console-highlights);
+  background-color: var(--console-highlights);
+}
+
+.icon-button img {
+  margin: 5px;
+  align-items: center;
+}
+
+.icon-button svg {
+  margin: 5px;
+  align-items: center;
+  stroke: var(--console-highlights);
+}
+
+.icon-button svg:hover * {
+  stroke: var(--bg-color);
 }
 
 .button-link {
@@ -292,19 +387,6 @@ main {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-.project-banner {
-    /* padding: 10px; */
-    /* width: 100%; */
-    /* max-width: 100%; */
-    margin: 10px;
-}
-
-.project-banner img {
-    /* max-width: 100%; */
-    width: 100%;
-    /* padding: 10px; */
 }
 
 .link-tile {
@@ -366,60 +448,35 @@ main {
     align-items: center;
 }
 
+.right-sidebar,
+.left-sidebar {
+    font-size: smaller;
+}
+
+.right-sidebar *,
+.left-sidebar * {
+    text-align: left;
+}
+
+.left-sidebar .logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+
+.left-sidebar .logo svg {
+  width: 50%;
+}
+
 footer {
-    /* background-color: #13092D; */
     background-color: var(--bg-color);
-    /* background color for footer */
-    width: 100%;
     padding: 10px;
     text-align: center;
-    /* this centers the footer text */
 }
 
-h1,
-h2,
-h3 {
-    /* color: #ED64F5; */
-    color: var(--console-highlights);
-}
-
-h1 {
-    /*font-size: 25px;*/
-    font-size: bigger;
-}
-
-h2 {
-    font-size: big;
-}
-
-strong {
-    /* this styles bold text */
-    color: #ED64F5;
-}
-
-#topBar {
-    width: 100%;
-    height: 30px;
-    padding: 10px;
-    font-size: smaller;
-    background-color: #13092D;
-}
-
-/* columns (mobile) */
-.container > * {
-    width:100%;
-    padding:1rem;
-}
-
-/* Tablet breakpoint */
-/* This sets the parameters for wide screens */
+/* tablet breakpoint */
 @media (min-width:768px) {
-    .container > .right-sidebar {
-        width:calc(100% / 4);
-    }
-    .container > .main-content {
-        width:calc(100% * 3/4);
-    }
     .tile-project-content {
         flex-wrap: nowrap;
         display: flex;
@@ -436,19 +493,28 @@ strong {
         max-width:75%;
         padding-left: 20px;
     }
-    #navbar ul {
-        flex-wrap: wrap;
+    .container > .left-sidebar,
+    .container > .right-sidebar {
+        width:50%;
     }
 }
 
-  /*///////////////*/
- /* Smallway Page */
-/*///////////////*/
-
-.column-left {
-  width: 33%;
-  text-align: right;
-  padding-right: 20px;
+/* desktop breakpoint */
+@media (min-width:1024px) {
+    .container > .header {
+        order:-2; /* header first */
+    }
+    .container > .left-sidebar {
+        /* left sidebar second (first in second row) */
+        order:-1; 
+    }
+    .container > .main-content {
+        width:50%;
+    }
+    .container > .left-sidebar,
+    .container > .right-sidebar {
+        width:25%;
+    }
 }
 
   /*////////////////*/
