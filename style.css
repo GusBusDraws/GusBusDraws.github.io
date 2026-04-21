@@ -228,11 +228,13 @@ h1 {
 
 .tile ul {
   list-style-position: inside;
-}
-
-.tile li {
   padding-left: 2em;
   text-indent: -1em;
+}
+
+.tile ol {
+  list-style-position: outside;
+  padding-left: 2em;
 }
 
 .tile-no-border {

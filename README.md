@@ -5,6 +5,7 @@ This is the source code for the website of Gus Becker deployed at:
 ## Change Log
 
 ### 2026-04-20
+- Add style for ordered list
 - Update blog template with RSS link
 ### 2026-04-14
 - Add CC post to home page and RSS feed
