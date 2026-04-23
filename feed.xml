@@ -11,7 +11,22 @@
 
   <!-- Above this is the header, below are each article -->
   
-  <!-- Malaysia time is GMT +0800 -->
+  <item>
+    <title>
+      Boulder Zine Fest 2026
+    </title>
+    <description>
+      A bit about my experience tabling at the first ever Boulder Zine Fest
+      earlier this month! I tabled as UFO Country Press alongside my friend
+      Earl. I share what the fest was like as well as some of
+      the zines we had, including my new article zine The OMNIGUS.
+    </description>
+    <link>https://gusbus.space/blog/creatives-club</link>
+    <pubDate>
+      Thu, 23 Apr 2026 00:30:00 -0600
+    </pubDate>
+  </item>
+  
   <item>
     <title>
       Crafting Community: The Start and State of Creatives Club
@@ -41,6 +56,7 @@
     </pubDate>
   </item>
   
+  <!-- Malaysia time is GMT +0800 -->
   <item>
     <title>Ho Chi Minh City</title>
     <description>
