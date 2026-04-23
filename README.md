@@ -4,6 +4,14 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-04-23
+- Add BZF post to feed, home, and blog page
+### 2026-04-22
+- Add photos to BZF blog
+### 2026-04-20
+- Finish BZF blog text
+- Add style for ordered list
+- Update blog template with RSS link
 ### 2026-04-14
 - Add CC post to home page and RSS feed
 - Add recent CC graphics to CC post
