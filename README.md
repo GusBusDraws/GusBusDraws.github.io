@@ -4,6 +4,9 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-05-28
+- Add photos to Cambodia I blog
+- Update Malaysian Borneo draft blogs
 ### 2026-04-23
 - Add BZF post to feed, home, and blog page
 ### 2026-04-22
