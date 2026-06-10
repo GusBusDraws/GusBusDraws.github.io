@@ -4,6 +4,11 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-06-10
+- Add an About Me page
+- Add Cambodia I blog to RSS feed
+### 2026-05-29
+- Rename cambodia-i-capital-to-coast to cambodia-i and update links
 ### 2026-05-28
 - Add photos to Cambodia I blog
 - Update Malaysian Borneo draft blogs
