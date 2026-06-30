@@ -4,6 +4,8 @@ This is the source code for the website of Gus Becker deployed at:
 
 ## Change Log
 
+### 2026-06-30
+- Make final edits to Cambodia II blog and update home page and RSS feed
 ### 2026-06-10
 - Update Cambodia II blog to double sidebar format
 - Add an About Me page
