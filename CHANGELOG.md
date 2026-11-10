@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-11-09
+- Rearrange project banners on home page
 - Fix p5.js link across all pages
 - Add web resources to home page
 - Separate file Change Log from README
