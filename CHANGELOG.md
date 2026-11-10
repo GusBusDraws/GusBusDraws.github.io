@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-11-09
+- Update format of Smallway index page
 - Add Casper's button to the Net Neighbors wall
 - Rearrange project banners on home page
 - Fix p5.js link across all pages
