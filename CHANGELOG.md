@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-11-09
+- Add web resources to home page
 - Separate file Change Log from README
 
 ## 2026-06-30
